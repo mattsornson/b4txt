@@ -50,7 +50,7 @@ class WelcomeController < ApplicationController
   
   def sms_reply
     @isbn = params[:Body]
-    @from = params[:Form]
+    @from = params[:From]
     
     if not(@isbn.nil?)
       if Books.isIsbn?(@isbn)

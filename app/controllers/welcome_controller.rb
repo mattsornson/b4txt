@@ -47,4 +47,28 @@ class WelcomeController < ApplicationController
       send_home_error
     end
   end
+  
+  def sms_reply
+    @isbn = params[:Body]
+    @from = params[:Form]
+    
+    if not(@isbn.nil?)
+      if Books.isIsbn?(@isbn)
+        
+        @price = Books.getBuybackInfoByIsbn(@isbn)["page"]["offers"]["merchant"][0]["prices"]["price"][0]
+        @beer_price = Beer.getPriceInBeers("miller", @price)
+        
+        @price_string = @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
+     			 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
+     					@prices[m["merchant_id"]]["bottles"].to_s + " bottles"
+        
+        account = Twilio::RestAccount.new(TWILIO_API_KEY, TWILIO_API_SECRET)
+        d = { 'From' => TWILIO_NUMBER, 'To' => @from,
+              'Body' => (@price_string) }
+        resp = account.request("/#{TWILIO_VERSION}/Accounts/#{TWILIO_SID}/SMS/Messages", 'POST', d)
+        resp.error! unless resp.kind_of? Net::HTTPSuccess
+        logger.info "### INFO ### Twilio error: " + resp.code
+      end
+    end
+  end
 end

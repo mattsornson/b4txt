@@ -11,6 +11,9 @@ gem 'json'
 gem 'httparty'
 gem 'crack'
 
+gem 'twiliolib'
+gem 'twilio-ruby'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

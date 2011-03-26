@@ -81,6 +81,11 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
+    twilio-ruby (0.2.0)
+      builder (>= 2.1.2)
+      crack (>= 0.1.8)
+    twiliolib (2.0.7)
+      builder (>= 2.1.2)
     tzinfo (0.3.25)
 
 PLATFORMS
@@ -93,3 +98,5 @@ DEPENDENCIES
   json
   rails (= 3.0.4)
   sqlite3
+  twilio-ruby
+  twiliolib

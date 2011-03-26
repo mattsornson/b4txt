@@ -53,6 +53,10 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endCo
 /* curved border radius */
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
+
+/*****************************white color******************************/
+background-color: #FFF;
+/*****************************white color******************************/
 }
 
 nav {
@@ -77,7 +81,6 @@ width: 940px;
 margin: 0 auto;
 padding-top: 30px;
 background: .alpha60 {
-/* Fallback for web browsers that doesn't support RGBa */
 background: rgb(0, 0, 0) transparent;
 /* RGBa with 0.6 opacity */
 background: rgba(0, 0, 0, 0.6);
@@ -372,9 +375,19 @@ color: #000;
   margin-top:5px;
 }
 
-#ISBN {
-margin:0;
-margin-top: 2px;
-margin-bottom: 2px;
-border: 0;
+/**********************
+Table Styles
+**********************/
+img.bookimage {
+  width: 100px;
+  height: auto;
 }
+
+td.booktitle {
+  
+}
+
+td.beermelink {
+  
+}
+

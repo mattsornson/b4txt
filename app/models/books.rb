@@ -36,7 +36,7 @@ class Books < ActiveRecord::Base
   def self.getBuybackInfoByIsbn(isbn)
     price = HTTParty.get("http://api.campusbooks.com/11/rest/buybackprices",
       :query => {:isbn => isbn,
-        :image_height => '100', :image_width => '80',
+        :image_width => 200,
         :format => 'json', :key => API_KEY})["response"]
   end
   

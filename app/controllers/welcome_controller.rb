@@ -65,7 +65,7 @@ class WelcomeController < ApplicationController
         account = Twilio::RestAccount.new(TWILIO_API_KEY, TWILIO_API_SECRET)
         d = { 'From' => TWILIO_NUMBER, 'To' => @from,
               'Body' => (@price_string) }
-        resp = account.request("/#{TWILIO_VERSION}/Accounts/#{TWILIO_SID}/SMS/Messages", 'POST', d)
+        resp = account.request("/#{TWILIO_VERSION}/Accounts/#{TWILIO_API_KEY}/SMS/Messages", 'POST', d)
         resp.error! unless resp.kind_of? Net::HTTPSuccess
         logger.info "### INFO ### Twilio error: " + resp.code
       end

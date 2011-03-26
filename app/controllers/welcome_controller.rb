@@ -58,9 +58,9 @@ class WelcomeController < ApplicationController
         @price = Books.getBuybackInfoByIsbn(@isbn)["page"]["offers"]["merchant"][0]["prices"]["price"][0]
         @beer_price = Beer.getPriceInBeers("miller", @price)
         
-        @price_string = @prices["kegs"].to_s + " kegs, " +
-     			 		@prices["cases"].to_s + " cases, " + 
-     					@prices["bottles"].to_s + " bottles"
+        @price_string = @beer_price["kegs"].to_s + " kegs, " +
+     			 		@beer_price["cases"].to_s + " cases, " + 
+     					@beer_price["bottles"].to_s + " bottles"
         
         account = Twilio::RestAccount.new(TWILIO_API_KEY, TWILIO_API_SECRET)
         d = { 'From' => TWILIO_NUMBER, 'To' => @from,

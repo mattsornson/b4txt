@@ -14,6 +14,7 @@ class WelcomeController < ApplicationController
   end
   
   def beer_me
-    
+    @book_prices = Books.getBuybackInfoByIsbn("0824828917")
+    @merchants = @book_prices["page"]["offers"]["merchant"]
   end
 end

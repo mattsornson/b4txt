@@ -1,0 +1,14 @@
+<table>
+	<tr>
+		<td>Merchant</td>
+		<td>Price</td>
+		<td>Buy</td>
+	</tr>
+	<% @merchants.each do |m| %>
+		<tr>
+			<td><%= image_tag m["merchant_image"] %></td>
+			<td><%= m["prices"]["price"][0] %></td>
+			<td><%= link_to "Beer Me", m["link"] %></td>
+		</tr>
+	<% end %>
+</table>

@@ -10,10 +10,10 @@ a {
   color : #0000ff; 
 }
 
-a:link:after, a:visited:after {
+/*a:link:after, a:visited:after {
 content: " (" attr(href) ") ";
 font-size: 70%;
-}
+}*/
 
 nav, sidebar, footer, header, aside { 
   display : none; 

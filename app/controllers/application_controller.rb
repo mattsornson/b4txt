@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   
   protected
     def has_ref?
-      not(params[:q].nil?)
+      not(params[:q].nil? or params[:q].empty?)
     end
     
     def send_home_error

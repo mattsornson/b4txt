@@ -13,11 +13,22 @@ display: block;
 
 body {
 line-height: 1;
-background: #0A67A2;
+background-attachment: fixed;
+background-color: #333;
+background-image: url(http://wmusailing.org/wp-content/uploads/2011/03/lettuce1.jpg);
+background-position: top center;
+background-repeat: no-repeat;
 font-family: Verdana, Arial, Helvetica, sans-serif;
 color: #333;
 font-size: 14px;
 line-height: 18px;
+
+margin:0;
+padding: 0;
+ 
+background-size: cover;
+-moz-background-size: cover;
+-webkit-background-size: cover;
 }
 	
 /* layout */
@@ -28,8 +39,17 @@ margin-left:auto;
 margin-right:auto;
 margin-top: 20px;
 margin-bottom: 20px;
-border: 3px solid #888;
-background: #fff;
+border: 0;
+.alpha60 {
+/* Fallback for web browsers that doesn't support RGBa */
+background: rgb(0, 0, 5) transparent;
+/* RGBa with 0.6 opacity */
+background: rgba(38,38,38,0.25);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
 /* curved border radius */
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
@@ -39,7 +59,16 @@ nav {
 width: 940px;
 height: 50px;
 margin: 0 auto;
-background: #D5EBF9;
+.alpha60 {
+/* Fallback for web browsers that doesn't support RGBa */
+background: rgb(0, 0, 0) transparent;
+/* RGBa with 0.6 opacity */
+background: rgba(0, 0, 0, 0.6);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
 margin-top: -5px;
 }
 
@@ -47,7 +76,16 @@ margin-top: -5px;
 width: 940px;
 margin: 0 auto;
 padding-top: 30px;
-background: #FFF 
+background: .alpha60 {
+/* Fallback for web browsers that doesn't support RGBa */
+background: rgb(0, 0, 0) transparent;
+/* RGBa with 0.6 opacity */
+background: rgba(0, 0, 0, 0.6);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
 repeat-y;
 overflow: hidden;
 }
@@ -209,7 +247,16 @@ margin: -15px 0 15px 25px;
 }
 
 #footer-area {
-background: #D5EBF9;
+.alpha60 {
+/* Fallback for web browsers that doesn't support RGBa */
+background: rgb(0, 0, 0) transparent;
+/* RGBa with 0.6 opacity */
+background: rgba(0, 0, 0, 0.6);
+/* For IE 5.5 - 7*/
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
 color: #000;
 font-size: 90%;
 padding: 18px 0;
@@ -275,7 +322,7 @@ color: #000;
   padding-bottom:5px;
   padding-left:5px;
   padding-right:5px;
-  padding-top:5px;
+  padding-top:0px;
   text-align:center;
   width:330px;
 }
@@ -323,4 +370,11 @@ color: #000;
 #search #searchButton input {
   font-size:16px;
   margin-top:5px;
+}
+
+#ISBN {
+margin:0;
+margin-top: 2px;
+margin-bottom: 2px;
+border: 0;
 }

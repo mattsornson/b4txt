@@ -7,7 +7,9 @@
 	<% @merchants.each do |m| %>
 		<tr>
 			<td><%= image_tag m["merchant_image"] %></td>
-			<td><%= m["prices"]["price"][0] %></td>
+			<td><%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
+			 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
+					@prices[m["merchant_id"]]["bottles"].to_s + " bottles" %></td>
 			<td><%= link_to "Beer Me", m["link"] %></td>
 		</tr>
 	<% end %>

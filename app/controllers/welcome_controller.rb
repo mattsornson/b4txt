@@ -27,9 +27,19 @@ class WelcomeController < ApplicationController
   def beer_me
     if has_ref?
       @isbn = params[:q]
+      if params[:brand].nil?
+        @beer_brand = "coors"
+      else
+        @beer_brand = params[:brand]
+      end
+      
       if Books.isIsbn?(@isbn)
         @book_prices = Books.getBuybackInfoByIsbn(@isbn)
         @merchants = @book_prices["page"]["offers"]["merchant"]
+        @prices = {}
+        @merchants.each do |m|
+          @prices[m["merchant_id"]] = Beer.getPriceInBeers(@beer_brand, m["prices"]["price"][0])
+        end
       else
         send_home_error
       end

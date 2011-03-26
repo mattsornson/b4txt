@@ -1,0 +1,14 @@
+<table>
+	<tr>
+		<td>Cover</td>
+		<td>Title</td>
+		<td>Price</td>
+	</tr>
+	<% @books.each do |b| %>
+		<tr>
+			<td><%= image_tag b["image"] %></td>
+			<td><%= b["title"] %></td>
+			<td><%= b["msrp"] %></td>
+		</tr>
+	<% end %>
+</table>

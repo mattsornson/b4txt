@@ -1,0 +1,24 @@
+<table>
+	<tr>
+		<td>
+			Cover
+		</td>
+		<td>
+			Title
+		</td>
+		<td>
+			Price
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= image_tag @book_info["page"]["image"] %>
+		</td>
+		<td>
+			<%= @book_info["page"]["title"] %>
+		</td>
+		<td>
+			<%= @book_info["page"]["msrp"] %>
+		</td>
+	</tr>
+</table>

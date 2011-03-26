@@ -1,24 +1,57 @@
-<table>
-	<tr>
-		<td>
-			Cover
-		</td>
-		<td>
-			Title
-		</td>
-		<td>
-			Price
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<%= image_tag @book_info["page"]["image"] %>
-		</td>
-		<td>
-			<%= @book_info["page"]["title"] %>
-		</td>
-		<td>
-			<%= @book_info["page"]["msrp"] %>
-		</td>
-	</tr>
-</table>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Beer for Textbooks</title>
+	<link rel="stylesheet" href="stylesheets/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<div id="wrapper"><!-- #wrapper -->
+	<nav><!-- top nav -->
+		<div class="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</nav><!-- end of top nav -->
+    
+    <header><!-- header -->
+		<img src="images/b4t.png" alt=""><!-- header image -->
+	</header><!-- end of header -->
+	
+
+	
+	<section id="main"><!-- #main content and sidebar area -->
+		
+<div id="search">
+<form action="/search" id="searchForm" method="get">
+<div id="searchEntry">
+<input name="q" type="search" class="aligncenter" id="searchBox" value="" autosave="com.beerfortextbooks.search" placeholder="Enter your query" results="10"/>
+<div id="searchOptionsCtrl"></div>
+</div>
+<div id="searchButton">
+<input type="submit" class="aligncenter" value="Search"/>
+</div>
+<p class="clearer"/>
+</form>
+</div>
+
+	</section><!-- end of #main content and sidebar-->
+	
+		<footer>
+		<section id="footer-area">
+
+		
+					  <p align="center">&copy; 2010 <a href="#">beerfortextbooks.com</a></p>
+			 
+
+		</section><!-- end of footer-area -->
+	</footer>
+	
+</div><!-- #wrapper -->
+
+</body>
+</html>

@@ -1,5 +1,4 @@
 <div id="wrapper"><!-- #wrapper -->
-
 	<nav><!-- top nav -->
 		<div class="menu">
 			<ul>
@@ -15,17 +14,23 @@
 	</header><!-- end of header -->
 	
 	<section id="main"><!-- #main content and sidebar area -->
-   <table>
-   	<% @merchants.each do |m| %>
-   		<tr class="listing">
-   			<td><%= image_tag m["merchant_image"] %></td>
-   			<td class="booze"><%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
-   			 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
-   					@prices[m["merchant_id"]]["bottles"].to_s + " bottles" %></td>
-   			<td><%= link_to "Sell for Beer", m["link"], {:class => "beermelink"} %></td>
-   		</tr>
-   	<% end %>
-   </table>
+	  
+	  <% @merchants.each do |m| %>
+	    <div id="beerlisting">
+    	  <div class="merchantimage">
+    	    <%= image_tag m["merchant_image"] %>
+    	  </div>
+    	  <div class="prices">
+    	    <%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
+    		 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
+    				@prices[m["merchant_id"]]["bottles"].to_s + " bottles" %>
+    		</div>
+    	  <div class="beerlink2">
+    	    <%= link_to "Sell for Beer", m["link"], {:class => "beermelink2"} %>
+    	  </div>
+  	  </div>
+	  <% end %>
+	  
 </section><!-- end of #main content and sidebar-->
 
   <footer>

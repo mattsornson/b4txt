@@ -116,7 +116,7 @@ color:#FFF;
 }
 
 a:hover, a:active {
-color: #0A67A2;
+color: #FFF;
 }
 
 p {
@@ -290,10 +290,10 @@ color: #FFF;
 
 
 /**********************
-Table Styles
+links and images
 **********************/
 img.bookimage {
-  width: 100px;
+  width: 70px;
   height: auto;
   padding-bottom: 10px;
 }
@@ -321,10 +321,13 @@ img#logo {
   color: #FFF;
 }
 
+/************results page***************/
+
 #results_content {
   clear: both;
   width: 100%;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 10px;
 }
 
 #results_content div {
@@ -337,9 +340,44 @@ img#logo {
 
 .booktitle {
 	padding: 10px;
+	padding-top: 50px;
 	width: 65%;
 }
 
 .beerlink {
 	padding: 10px;
+  padding-top: 55px;
 }
+
+div.booktitle {
+  text-size: 1.4em;
+}
+/************Beer Me page***************/
+
+#beerlisting {
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#beerlisting div {
+  float: left;
+  background: rgba(255,255,255,0.1);
+}
+
+#beerlisting .beerlink2 {
+  width: 150px;
+  text-align: right;
+  padding: 10px;
+}
+
+.merchantimage {
+  padding: 10px;
+  width: 120px;
+}
+
+.prices {
+  padding: 10px;
+  width: 600px;
+}
+

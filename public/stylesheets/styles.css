@@ -164,6 +164,7 @@ text-decoration: underline;
 header {
 padding: 20px 0 0 0;
 margin-bottom: 75px;
+border: 0;
 }
 
 header>h1 {
@@ -414,7 +415,7 @@ div.booktitle {
   width: 100%;
 padding: 10px;
 	position: relative;
-	top: -125px;
+	top: -115px;
 }
 .search-input-large {
 	float: left;
@@ -634,4 +635,9 @@ img.bottle:hover {
 img.selected {
 	opacity:1.0;
 	filter:alpha(opacity=100);
+}
+
+.error {
+	color: red;
+	text-shadow: 1px 1px 1px #333333;
 }

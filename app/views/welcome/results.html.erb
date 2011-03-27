@@ -31,6 +31,10 @@
 	      <div class="booktitle"><p><%= b["title"] %></p></div>
 	      <div class="beerlink">
 		
+		<% if b["isbn10"].nil? %>
+		<% b["isbn10"] = b["isbn13"] %>
+		<% end %>
+		
 		<button class="beerme_results" data-link="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</button></div>
 	    
 	  </div>

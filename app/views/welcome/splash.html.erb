@@ -13,7 +13,7 @@
 		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
 	
-	<p><%= flash[:notice ]%></p>
+	
   
   <script type="text/javascript">
   	$(document).ready(function(){
@@ -56,13 +56,12 @@
 	</ul>
 	</div>
 	
-	<p><%= flash[:notice ]%></p>
-	
   <form action="/results" method="GET">
     <input id="hidden" type="hidden" name="brand" value="bud">
     <div id="search-box-large">
       <input id="search-input-school" class="search-input-large ui-autocomplete-input" type="text" name="q" value="ISBN - Title - Keyword"/>
-<input id="searchboxxx" class="home_submit" type="submit" value="Textbooks => Beer" />
+<input id="searchboxxx" class="home_submit" type="submit" value="Textbooks => Beer" /><br /><br /><br />
+	  <p class="error"><%= flash[:notice ]%></p>
     </div>
     
 		

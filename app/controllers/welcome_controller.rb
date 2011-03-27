@@ -40,14 +40,26 @@ class WelcomeController < ApplicationController
         @book_prices = Books.getBuybackInfoByIsbn(@isbn)
         @merchants = @book_prices["page"]["offers"]["merchant"]
         @prices = {}
-        @merchants.each do |m|
-          @prices[m["merchant_id"]] = Beer.getPriceInBeers(@beer_brand, m["prices"]["price"][0])
+        if @merchants.nil?
+          send_home_error
+          return
+        else
+          @merchants.each do |m|
+            begin
+              @prices[m["merchant_id"]] = Beer.getPriceInBeers(@beer_brand, m["prices"]["price"][0].to_i) 
+            rescue TypeError
+              send_home_error
+              return
+            end
+          end
         end
       else
         send_home_error
+        return
       end
     else
       send_home_error
+      return
     end
   end
   

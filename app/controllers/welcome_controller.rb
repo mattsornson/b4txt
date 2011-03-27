@@ -60,8 +60,8 @@ class WelcomeController < ApplicationController
         logger.info @from
         
         @price = Books.getBuybackInfoByIsbn(@isbn)
-        @price = @price["page"]["offers"]["merchant"][0]["prices"]["price"][0]
-        @beer_price = Beer.getPriceInBeers("miller", @price)
+        @price_single = @price["page"]["offers"]["merchant"][0]["prices"]["price"][0]
+        @beer_price = Beer.getPriceInBeers("miller", @price_single)
         
         logger.info @beer_price
         

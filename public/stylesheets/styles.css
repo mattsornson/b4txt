@@ -475,6 +475,14 @@ ul {
 	width: 400px;
 }
 
+#type {
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+}
+
+#beer {
+	
+}
+
 .steps {
 	margin: 0 auto;
 	width: 900px;
@@ -490,3 +498,20 @@ ul {
 	position: relative;
 	top: 80px;
 }
+
+/*position and hide the menu initially - leave room for menu items to expand...*/
+#page {
+  padding: 20px;
+  width:100%;
+}
+#menu {
+  width:100%; 
+  display:none;
+}
+/*dock styling...*/
+/*...centre the dock, and give the wrapper a background and partial border...*/
+#menu div.jqDockWrap {
+  margin:0 auto; 
+}
+/*...set the cursor...*/
+#menu div.jqDock {cursor:pointer;}

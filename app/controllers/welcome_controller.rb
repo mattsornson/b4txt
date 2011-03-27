@@ -55,12 +55,20 @@ class WelcomeController < ApplicationController
     if not(@isbn.nil?)
       if Books.isIsbn?(@isbn)
         
-        @price = Books.getBuybackInfoByIsbn(@isbn)["page"]["offers"]["merchant"][0]["prices"]["price"][0]
+        logger.info @isbn
+        logger.info @from
+        
+        @price = Books.getBuybackInfoByIsbn(@isbn)
+        @price = @price["page"]["offers"]["merchant"][0]["prices"]["price"][0]
         @beer_price = Beer.getPriceInBeers("miller", @price)
+        
+        logger.info @beer_price
         
         @price_string = @beer_price["kegs"].to_s + " kegs, " +
      			 		@beer_price["cases"].to_s + " cases, " + 
      					@beer_price["bottles"].to_s + " bottles"
+     					
+     		logger.info @price_string
         
         account = Twilio::RestAccount.new(TWILIO_API_KEY, TWILIO_API_SECRET)
         d = { 'From' => TWILIO_NUMBER, 'To' => @from,

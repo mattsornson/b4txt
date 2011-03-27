@@ -72,7 +72,7 @@ class WelcomeController < ApplicationController
      		logger.info @price_string
      		
      		bitly = Bitly.new(BITLY_USERNAME, BITLY_API_KEY)
-     		page_url = bitly.shorten('www.marketingformavens.com')
+     		page_url = bitly.shorten(@price["page"]["offers"]["merchant"][0]["link"])
         
         account = Twilio::RestAccount.new(TWILIO_API_KEY, TWILIO_API_SECRET)
         d = { 'From' => TWILIO_NUMBER, 'To' => @from,

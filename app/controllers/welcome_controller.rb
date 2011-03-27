@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   def results
     if has_ref?
       @keywords = params[:q]
+      @brand = params[:brand]
       if Books.isIsbn?(@keywords)
         redirect_to :action => :beer_me, :q => @keywords
       else
@@ -18,7 +19,6 @@ class WelcomeController < ApplicationController
           redirect_to :root
         else
           @books = @search_pages["page"]["results"]["book"]
-          @brand = params[:brand]
         end
       end
     else
@@ -84,5 +84,9 @@ class WelcomeController < ApplicationController
         logger.info "### INFO ### Twilio error: " + resp.code
       end
     end
+  end
+  
+  def about
+    
   end
 end

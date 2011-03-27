@@ -8,6 +8,7 @@ Beer4textbooks::Application.routes.draw do
   
   match 'results' => 'welcome#results'
   match 'beer_me' => 'welcome#beer_me'
+  match 'about' => 'welcome#about'
   match 'sms_query' => 'welcome#sms_reply', :as => 'post'
 
   # Sample of named route:

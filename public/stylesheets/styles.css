@@ -122,6 +122,7 @@ nav {
   margin: 0 auto;
   margin-top: -5px;
   color: #FFF;
+  width: 400px;
 }
 
 nav .menu {
@@ -130,7 +131,7 @@ nav .menu {
 }
 
 nav .menu ul {
-  margin: 0;
+  text-align: center;
   padding: 17px 0 0 20px;
   list-style: none;
   line-height: normal;
@@ -138,7 +139,7 @@ nav .menu ul {
 
 nav .menu li {
   display: block;
-  float: right;
+  float: left;
 }
 
 nav .menu a {

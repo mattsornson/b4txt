@@ -70,6 +70,8 @@ class WelcomeController < ApplicationController
     if not(@isbn.nil?)
       if Books.isIsbn?(@isbn)
         
+        @isbn = @isbn.tr('-', '').tr('x', '').tr('X', '')
+        
         logger.info @isbn
         logger.info @from
         

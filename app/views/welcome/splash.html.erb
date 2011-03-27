@@ -14,48 +14,40 @@
 	</header><!-- end of header -->
 	
 	<p><%= flash[:notice ]%></p>
-	
-
   
-	<script type="text/javascript">
+  <script type="text/javascript">
+  	$(document).ready(function(){
+      var opts =
+        { align: 'top'
+        , size: 128
+        , labels: true
+        , source: function(i){ return this.src.replace(/gif$/,'png'); }
+        };
+      $('#menu').jqDock(opts);
+    });
+  </script>
 
-	
-	$(document).ready(function(){
-	  
-	  //the most commonly used options are likely to be align, size and labels, closely followed
-    //by fadeIn and inactivity (the other options are probably for the more advanced user)
-    var opts =
-      // horizontal Dock with images expanding downwards in the vertical axis...
-      { align: 'top'
-      // set the maximum minor axis (vertical) image dimension to 48px
-      , size: 48
-      // add labels..
-      , labels: true
-      // swap the GIF extension for PNG extension for the larger image...
-      , source: function(i){ return this.src.replace(/gif$/,'png'); }
-      };
-    $('#menu').jqDock(opts);
-  });
-	</script>
-	<div class="steps">
-	<ul id="description" class="clearfix">
-		
-		<li id="pick"><h3>pick</h3><p>choose your favorite beer</p>
-		    <div id='menu'>
-		      <img src='images/bottles/arcadia.png' title='arcadia' alt='' />
-		      <img src='images/bottles/becks.png' title='becks' alt='' />
-		      <img src='images/bottles/budlight.png' title='budlight' alt='' />
-		      <img src='images/bottles/coors.png' title='coors' alt='' />
-		      <img src='images/bottles/corona.png' title='corona' alt='' />
-		      <img src='images/bottles/guinness.png' title='guinness' alt='' />
-		      <img src='images/bottles/heineken.png' title='heineken' alt='' />
-		      <img src='images/bottles/keystone.png' title='keystone' alt='' />
-		      <img src='images/bottles/labatt.png' title='labatt' alt='' />
-		      <img src='images/bottles/miller.png' title='miller' alt='' />
-		      <img src='images/bottles/rollingrock.png' title='rollingrock' alt='' />
-		      <img src='images/bottles/samadams.png' title='samadams' alt='' />
-		 
-		  </div></li>
+  <div class="steps">
+  <ul id="description" class="clearfix">
+
+  	<li id="pick"><h3>pick</h3><p>choose your favorite beer</p>
+      <div id='page'>
+        <div id='menu'>
+          <img class="bottle" src='images/bottles/arcadia.png' name='arcadia' alt='' />
+          <img class="bottle" src='images/bottles/becks.png' name='becks' alt='' />
+          <img class="bottle" src='images/bottles/budlight.png' name='budlight' alt='' />
+          <img class="bottle" src='images/bottles/coors.png' name='coors' alt='' />
+          <img class="bottle" src='images/bottles/corona.png' name='corona' alt='' />
+          <img class="bottle" src='images/bottles/guinness.png' name='guinness' alt='' />
+          <img class="bottle" src='images/bottles/heineken.png' name='heineken' alt='' />
+          <img class="bottle" src='images/bottles/keystone.png' name='keystone' alt='' />
+          <img class="bottle" src='images/bottles/labatt.png' name='labatt' alt='' />
+          <img class="bottle" src='images/bottles/miller.png' name='miller' alt='' />
+          <img class="bottle" src='images/bottles/rollingrock.png' name='rollingrock' alt='' />
+          <img class="bottle" src='images/bottles/samadams.png' name='samadams' alt='' />
+        </div>
+      </div>
+    </li>
 		
 	  <li id="type"><h3>type</h3><p>give us your textbook isbn, title, author, or keyword.</p>
 		<%= image_tag "arrow-read.png", {:id => "search_arrow"} %>

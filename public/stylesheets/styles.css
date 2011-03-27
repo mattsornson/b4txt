@@ -526,6 +526,7 @@ ul {
 	z-index: 9999;
 }
 
+
 /*position and hide the menu initially - leave room for menu items to expand...*/
 #page {
   padding: 20px;
@@ -542,3 +543,7 @@ ul {
 }
 /*...set the cursor...*/
 #menu div.jqDock {cursor:pointer;}
+
+img.bottle {
+  padding: 0 10px;
+}

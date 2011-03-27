@@ -302,8 +302,9 @@ img.bookimage {
 }
 
 img#logo {
-  display: block;
-  margin: 0 auto;
+ display: block;
+ width: 700px;
+ padding-left: 20px;
 }
 
 .beermelink {

@@ -25,6 +25,10 @@
         };
       $('#menu').jqDock(opts);
 
+      $('#search-input-school').click(function() {
+		$(this).val('');
+	  })
+
 	  $('.bottle').click(function() {
 			$('#hidden').val($(this).attr('name'));
 			$('.bottle').removeClass("selected");

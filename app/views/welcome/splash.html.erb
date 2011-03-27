@@ -1,14 +1,4 @@
-<div id="wrapper"><!-- #wrapper -->
-	<nav><!-- top nav -->
-		<div class="menu">
-			<ul>
-			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
-			  <li>|</li>
-				<li><a href="/">Home</a></li>
-			</ul>
-		</div>
-	</nav><!-- end of top nav -->
-    
+<div id="wrapper"><!-- #wrapper -->    
   <header><!-- header -->
 		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
@@ -64,15 +54,26 @@
     <input id="hidden" type="hidden" name="brand" value="bud">
     <div id="search-box-large">
       <input id="search-input-school" class="search-input-large ui-autocomplete-input" type="text" name="q" value="ISBN - Title - Keyword"/>
-<input id="searchboxxx" class="home_submit" type="submit" value="Textbooks => Beer" /><br /><br /><br />
+      <input id="searchboxxx" class="home_submit" type="submit" value="Textbooks => Beer" /><br /><br /><br />
 	  <p class="error"><%= flash[:notice ]%></p>
     </div>
-    
-		
   </form>
 
 	
 	<footer>
+	  
+	  <nav><!-- top nav -->
+  		<div class="menu">
+  			<ul>
+  			  <li><a href="/about">About Us</a></li>
+  			  <li>|</li>
+  			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
+  			  <li>|</li>
+  				<li><a href="/">Home</a></li>
+  			</ul>
+  		</div>
+  	</nav><!-- end of top nav -->
+	  
   	<section id="footer-area">
   		<p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
   	</section><!-- end of footer-area -->

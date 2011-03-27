@@ -4,6 +4,7 @@
 		$('.beerme_results').click(function() {
 			console.log($(this).data("link"));
 			window.location = $(this).data("link");
+			return false;
 		});
 	});
 </script>
@@ -35,7 +36,7 @@
 		<% b["isbn10"] = b["isbn13"] %>
 		<% end %>
 		
-		<button class="beerme_results" data-link="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</button></div>
+		<button class="beerme_results" data-link="<%= "http://www.beerfortextbooks.com/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</button></div>
 	    
 	  </div>
 	<% end %>

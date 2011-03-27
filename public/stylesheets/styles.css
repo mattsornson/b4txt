@@ -465,22 +465,41 @@ ul {
 
 .steps h3 {
 	text-align: center;
-	font-size: 36px;
-	text-shadow: 1px 1px 1px #333;
-	color: white;
+	font-size: 24px;
+	text-shadow: 1px 1px 3px #333;
+	color: #white;
 	font-family: Georgia, serif;
+	padding: 5px;
+	margin: 5px;
 }
 
 #pick {
 	width: 400px;
+	position: relative;
 }
 
 #type {
 	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	background: rgba(255,255,255,0.5);
+	height: 125px;
+	border: 1px solid rgba(255,255,255,0.7);
+	position: absolute;
+	top: 450px;
+	left: 30px;
+	color: #333;
+	z-index: 9999;
 }
 
 #beer {
-	
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	background: rgba(255,255,255,0.5);
+	height: 125px;
+	border: 1px solid rgba(255,255,255,0.7);
+	position: absolute;
+	top: 600px;
+	left: 800px;
+	color: #333;
+	width: 300px;
 }
 
 .steps {
@@ -496,7 +515,15 @@ ul {
 
 #search_arrow {
 	position: relative;
-	top: 80px;
+	top: -50px;
+	left: 150px;
+}
+
+#beer_arrow {
+	position: relative;
+	top: -180px;
+	left: -50px;
+	z-index: 9999;
 }
 
 /*position and hide the menu initially - leave room for menu items to expand...*/

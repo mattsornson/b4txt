@@ -163,6 +163,7 @@ text-decoration: underline;
 
 header {
 padding: 20px 0 0 0;
+margin-bottom: 75px;
 }
 
 header>h1 {
@@ -536,7 +537,7 @@ ul {
 	position: relative;
 	background: transparent;
 	border: none;
-	left: 200px;
+	left: 75px;
 	top: -50px;
 	color: #ffcc00;
 }
@@ -568,8 +569,8 @@ ul {
 	height: 125px;
 	border: none;
 	position: relative;
-	top: -200px;
-	left: 50px;
+	top: -100px;
+	left: 80px;
 	color: #ffcc00;
 	width: 300px;
 }
@@ -582,7 +583,7 @@ ul {
 
 .steps p {
 	text-shadow: 1px 1px 1px #666666;
-	font-size: 16px;
+	font-size: 24px;
 }
 
 #search_arrow {
@@ -621,4 +622,16 @@ ul {
 
 img.bottle {
   padding: 0 10px;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+}
+
+img.bottle:hover {
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+
+img.selected {
+	opacity:1.0;
+	filter:alpha(opacity=100);
 }

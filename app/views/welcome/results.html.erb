@@ -1,4 +1,5 @@
 <script type="text/javascript">
+
 	$(document).ready(function() {
 		$('.beerme_results').click(function() {
 			console.log($(this).data("link"));
@@ -30,7 +31,7 @@
 	      <div class="booktitle"><p><%= b["title"] %></p></div>
 	      <div class="beerlink">
 		
-		<button class="beerme_results" data-link="<%= "/beer_me?q=" + b["isbn10"] %>">Sell for Beer</button></div>
+		<button class="beerme_results" data-link="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</button></div>
 	    
 	  </div>
 	<% end %>

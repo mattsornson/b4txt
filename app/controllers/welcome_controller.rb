@@ -18,6 +18,7 @@ class WelcomeController < ApplicationController
           redirect_to :root
         else
           @books = @search_pages["page"]["results"]["book"]
+          @brand = params[:brand]
         end
       end
     else

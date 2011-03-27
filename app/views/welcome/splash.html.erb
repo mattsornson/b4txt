@@ -24,16 +24,22 @@
         , source: function(i){ return this.src.replace(/gif$/,'png'); }
         };
       $('#menu').jqDock(opts);
+
+	  $('.bottle').click(function() {
+			$('#hidden').val($(this).attr('name'));
+			$('.bottle').removeClass("selected");
+			$(this).addClass("selected");
+		});
     });
   </script>
 
   <div class="steps">
   <ul id="description" class="clearfix">
 
-  	<li id="pick"><p><span>1</span> choose your favorite beer</p>
+  	<li id="pick"><p>pick your currency</p>
       <div id='page'>
         <div id='menu'>
-          <img class="bottle" src='images/bottles/budlight.png' name='bud' id='budlight' />
+          <img class="bottle selected" src='images/bottles/budlight.png' name='bud' id='budlight' />
           <img class="bottle" src='images/bottles/coors.png' name='coors' id='coors' />
           <img class="bottle" src='images/bottles/corona.png' name='corona' id='corona' />
           <img class="bottle" src='images/bottles/heineken.png' name='heineken' id='heineken' />
@@ -43,10 +49,7 @@
         </div>
       </div>
     </li>
-    
-	  <li id="type"><p><span>2</span> give us your textbook isbn, title, author, or keyword.</p>
-		<%= image_tag "arrow-up.png", {:id => "search_arrow"} %>
-		</li>
+   
 
     <li id="beer">
 	<%= image_tag "beer_girl.png", {:id => "beer_girl"} %></li>
@@ -56,7 +59,7 @@
 	<p><%= flash[:notice ]%></p>
 	
   <form action="/results" method="GET">
-    <input id="hidden" type="hidden" name="brand" value="">
+    <input id="hidden" type="hidden" name="brand" value="bud">
     <div id="search-box-large">
       <input id="search-input-school" class="search-input-large ui-autocomplete-input" type="text" name="q" value="ISBN - Title - Keyword"/>
 <input id="searchboxxx" class="home_submit" type="submit" value="Textbooks => Beer" />

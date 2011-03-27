@@ -410,10 +410,10 @@ div.booktitle {
 #search-box-large {
   text-align: center;
   margin: 0 auto;
-  width: 400px;
+  width: 100%;
 padding: 10px;
 	position: relative;
-	left: -60px;
+	top: -125px;
 }
 .search-input-large {
 	float: left;
@@ -436,7 +436,7 @@ padding: 10px;
   border-top-width:2px;
   color:#888888;
   font-size:20px;
-  width:300px;
+  width:70%;
 padding: 10px;
 	position: relative;
   
@@ -459,6 +459,16 @@ input[type=submit], button {
 	cursor:pointer;
 	background-color:rgba(255,204,0,1);
 	width: 200px;
+}
+
+input[type=submit].home_submit {
+	top: -1px;
+	left: 10px;
+	position: relative;
+}
+
+input[type=submit].home_submit:active {
+	top: 2px;
 }
 
 .beer_prices {
@@ -524,29 +534,43 @@ ul {
 #pick {
 	width: 400px;
 	position: relative;
+	background: transparent;
+	border: none;
+	left: 200px;
+	top: -50px;
+	color: #ffcc00;
 }
 
 #type {
 	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
-	background: rgba(255,255,255,0.5);
 	height: 125px;
-	border: 1px solid rgba(255,255,255,0.7);
-	position: absolute;
-	top: 450px;
-	left: 30px;
-	color: #333;
+	background: none;
+	border: none;
+	position: relative;
+	top: 200px;
+	left: 0px;
+	color: #ffcc00;
 	z-index: 9999;
+	text-shadow: 1px 1px 1px #333;
+	width: 500px;
+}
+
+#type span {
+	font-size: 36px;
+	margin-right: 10px;
+	position: relative;
+	top: 7px;
 }
 
 #beer {
 	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
-	background: rgba(255,255,255,0.5);
+	background: none;
 	height: 125px;
-	border: 1px solid rgba(255,255,255,0.7);
-	position: absolute;
-	top: 600px;
-	left: 800px;
-	color: #333;
+	border: none;
+	position: relative;
+	top: -200px;
+	left: 50px;
+	color: #ffcc00;
 	width: 300px;
 }
 
@@ -563,14 +587,14 @@ ul {
 
 #search_arrow {
 	position: relative;
-	top: -50px;
-	left: 150px;
+	top: -110px;
+	left: -150px;
 }
 
 #beer_arrow {
 	position: relative;
-	top: -180px;
-	left: -50px;
+	top: -300px;
+	left: -200px;
 	z-index: 9999;
 }
 
@@ -579,6 +603,9 @@ ul {
 #page {
   padding: 20px;
   width:100%;
+  z-index: 9999;
+  position: relative;
+  left: -50px;
 }
 #menu {
   width:100%; 

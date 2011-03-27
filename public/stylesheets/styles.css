@@ -4,6 +4,27 @@ margin: 0;
 padding: 0;
 }
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 /* render html5 elements as block */
 header, footer, section, aside, nav, article {
 display: block;
@@ -300,11 +321,25 @@ img#logo {
   color: #FFF;
 }
 
-#content {
+#results_content {
   clear: both;
+  width: 100%;
+  background: rgba(255,255,255,0.1);
 }
 
-#content div {
+#results_content div {
   float: left;
-  display: normal;
+}
+
+.bookimage {
+	padding: 10px;
+}
+
+.booktitle {
+	padding: 10px;
+	width: 65%;
+}
+
+.beerlink {
+	padding: 10px;
 }

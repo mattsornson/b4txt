@@ -15,13 +15,15 @@
 	
 	<section id="main"><!-- #main content and sidebar area -->
 	  
-	  <div id="content">
-	    <% @books.each do |b| %>
-	      <div><%= image_tag b["image"], {:class => "bookimage"} %></div>
-	      <div class="booktitle"><%= b["title"] %>
-	      <div class="beerlinktd"><a class="beermelink" href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</a></div>
-	    <% end %>
+	<% @books.each do |b| %>
+	  <div id="results_content" class="clearfix">
+	    
+	      <div class="bookimage"><%= image_tag b["image"], {:class => "bookimage"} %></div>
+	      <div class="booktitle"><p><%= b["title"] %></p></div>
+	      <div class="beerlink"><a class="beermelink" href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</a></div>
+	    
 	  </div>
+	<% end %>
 	  
   </section><!-- end of #main content and sidebar-->
 	

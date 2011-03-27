@@ -267,40 +267,6 @@ color: #FFF;
 }
 
 
-fieldset.search {
-	border: none;
-	width: 243px;
-	margin: 0 auto;
-	background: #D19C42;
-}
-.search input, .search button {
-	border: none;
-	float: left;
-}
-.search input.box {
-	color: #D19C42;
-	font-size: 1.2em;
-	width: 190px;
-	height: 30px;
-	padding: 8px 5px 0;
-	background: #D19C42
-	margin-right: 5px;
-}
-.search input.box:focus {
-	background: #616161 url(search_bg.gif) no-repeat left -38px;
-	outline: none;
-}
-.search button.btn {
-	width: 38px;
-	height: 38px;
-	cursor: pointer;
-	text-indent: -9999px;
-	background: #fbc900 
-}
-.search button.btn:hover {
-	background: 
-}
-
 
 
 /**********************

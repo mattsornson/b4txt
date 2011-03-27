@@ -429,3 +429,8 @@ div.booktitle {
   position:relative;
   top:3px;
 }
+
+div#description {
+  width: 450px;
+  margin: 0 auto;
+}

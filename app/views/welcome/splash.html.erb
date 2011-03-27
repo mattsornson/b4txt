@@ -12,7 +12,7 @@
   <header><!-- header -->
 		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
-	
+	<p><%= flash[:notice ]%></p>
   <form method="get" id="searchform" action="/results">
     <fieldset class="search">
     	<input type="text" name="q" id="q" value="Text to be displayed here" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>

@@ -21,9 +21,19 @@
 </head>
 <body>
 
-<%= flash[:notice ]%>
-
 <%= yield %>
 
+<div class="facebook">
+<%= fb_connect_async_js %>
+<% if current_facebook_user %>
+  <%= "Welcome #{current_facebook_user.first_name} #{current_facebook_user.last_name}!" %>
+<% else
+   # you must explicitly request permissions for facebook user fields.
+   # here we instruct facebook to ask the user for permission for our website
+   # to access the user's facebook email and birthday
+   %>
+  <%= fb_login_and_redirect(root_path, :perms => 'email') %>
+<% end %>
+</div>
 </body>
 </html>

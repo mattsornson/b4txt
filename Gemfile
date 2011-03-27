@@ -14,6 +14,7 @@ gem 'crack'
 gem 'twiliolib'
 gem 'twilio-ruby'
 gem 'bitly'
+gem 'facebooker2'
 
 # Use unicorn as the web server
 # gem 'unicorn'

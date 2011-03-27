@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Facebooker2::Rails::Controller
+  
   protect_from_forgery
   
   helper_method :has_ref?, :send_home_error

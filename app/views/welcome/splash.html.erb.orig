@@ -13,6 +13,24 @@
 		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
 	
+<<<<<<< HEAD
+	<div class="steps">
+	<ul id="description" class="clearfix">
+		
+		<li id="pick"><h3>pick</h3><p>choose your favorite beer</p></li>
+		
+	  <li id="type"><h3>type</h3><p>give us your textbook isbn, title, author, or keyword.</p>
+		<%= image_tag "arrow-down.png", {:id => "search_arrow"} %>
+		</li>
+
+    
+
+    <li id="beer"><h3>beer</h3><p>get beer for your textbooks</p></li>
+	</ul>
+	</div>
+	
+	<p><%= flash[:notice ]%></p>
+=======
 	<p><%= flash[:notice ]%></p>
 	
 	<div id='page'>
@@ -33,20 +51,7 @@
   </div>
   
 	<script type="text/javascript">
-	<div class="steps">
-	<ul id="description" class="clearfix">
-		
-		<li id="pick"><h3>pick</h3><p>choose your favorite beer</p></li>
-		
-	  <li id="type"><h3>type</h3><p>give us your textbook isbn, title, author, or keyword.</p>
-		<%= image_tag "arrow-down.png", {:id => "search_arrow"} %>
-		</li>
 
-    
-
-    <li id="beer"><h3>beer</h3><p>get beer for your textbooks</p></li>
-	</ul>
-	</div>
 	
 	$(document).ready(function(){
 	  
@@ -65,8 +70,7 @@
     $('#menu').jqDock(opts);
   });
 	</script>
-	
-	<p><%= flash[:notice ]%></p>
+>>>>>>> e0abcd95d38a3679b458519f75c8c3ea05586342
 	
   <form action="/results" method="GET">
     <div id="search-box-large">
@@ -74,6 +78,14 @@
     </div>
 		<input type="submit" value="Textbooks => Beer" />
   </form>
+  
+  <div id="description">
+	  <p id="first">1st - type in textbook isbn, title, author, or keyword.</p>
+
+    <p id="second">2nd - choose your favorite beer. "suggest beer."</p>
+
+    <p id="third">3rd - BEER ME - sell your textbooks for beer money.</p>
+	</div>
 
 	
 	<footer>

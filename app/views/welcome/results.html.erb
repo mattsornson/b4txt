@@ -36,7 +36,7 @@
 		<% b["isbn10"] = b["isbn13"] %>
 		<% end %>
 		
-		<button class="beerme_results" data-link="<%= "http://www.beerfortextbooks.com/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</button></div>
+		<button type="button" class="beerme_results" data-link="<%= "http://www.beerfortextbooks.com/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</button></div>
 	    
 	  </div>
 	<% end %>

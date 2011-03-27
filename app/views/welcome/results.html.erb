@@ -3,7 +3,7 @@
 	$(document).ready(function() {
 		$('.beerme_results').click(function() {
 			console.log($(this).data("link"));
-			window.location.href = $(this).data("link");
+			window.location = $(this).data("link");
 		});
 	});
 </script>

@@ -13,6 +13,7 @@ gem 'crack'
 
 gem 'twiliolib'
 gem 'twilio-ruby'
+gem 'bitly'
 
 # Use unicorn as the web server
 # gem 'unicorn'

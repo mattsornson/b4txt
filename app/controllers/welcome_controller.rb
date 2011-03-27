@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   require 'pp'
+  require 'bitly'
   
   def splash
 
@@ -69,10 +70,13 @@ class WelcomeController < ApplicationController
      					@beer_price["bottles"].to_s + " bottles"
      					
      		logger.info @price_string
+     		
+     		bitly = Bitly.new(BITLY_USERNAME, BITLY_API_KEY)
+     		page_url = bitly.shorten('www.marketingformavens.com')
         
         account = Twilio::RestAccount.new(TWILIO_API_KEY, TWILIO_API_SECRET)
         d = { 'From' => TWILIO_NUMBER, 'To' => @from,
-              'Body' => (@price_string) }
+              'Body' => (@price_string + " " + page_url.shorten) }
         resp = account.request("/#{TWILIO_VERSION}/Accounts/#{TWILIO_API_KEY}/SMS/Messages", 'POST', d)
         resp.error! unless resp.kind_of? Net::HTTPSuccess
         logger.info "### INFO ### Twilio error: " + resp.code

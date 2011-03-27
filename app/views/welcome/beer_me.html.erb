@@ -3,14 +3,15 @@
 	<nav><!-- top nav -->
 		<div class="menu">
 			<ul>
+			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
+			  <li>|</li>
 				<li><a href="/">Home</a></li>
-				<li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
 			</ul>
 		</div>
 	</nav><!-- end of top nav -->
     
-    <header><!-- header -->
-		<img src="images/logo.png" alt=""><!-- header image -->
+  <header><!-- header -->
+		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
 	
 	<section id="main"><!-- #main content and sidebar area -->
@@ -27,7 +28,7 @@
    			<td><%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
    			 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
    					@prices[m["merchant_id"]]["bottles"].to_s + " bottles" %></td>
-   			<td><%= link_to "Sell for Beer", m["link"] %></td>
+   			<td><%= link_to "Sell for Beer", m["link"], {:class => "beerme"} %></td>
    		</tr>
    	<% end %>
    </table>
@@ -38,7 +39,7 @@
 		<section id="footer-area">
 
 		
-					  <p align="center">&copy; 2010 <a href="#">beerfortextbooks.com</a></p>
+					  <p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
 			 
 
 		</section><!-- end of footer-area -->

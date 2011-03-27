@@ -19,11 +19,11 @@ background-image: url(http://wmusailing.org/wp-content/uploads/2011/03/lettuce1.
 background-position: top center;
 background-repeat: no-repeat;
 font-family: Verdana, Arial, Helvetica, sans-serif;
-color: #333;
+color: #FFF;
 font-size: 14px;
 line-height: 18px;
 
-margin:0;
+margin: 0;
 padding: 0;
  
 background-size: cover;
@@ -37,59 +37,31 @@ background-size: cover;
 width: 940px;
 margin-left:auto;
 margin-right:auto;
-margin-top: 20px;
-margin-bottom: 20px;
+margin-top: 30px;
+margin-bottom: 30px;
 border: 0;
-.alpha60 {
-/* Fallback for web browsers that doesn't support RGBa */
-background: rgb(0, 0, 5) transparent;
-/* RGBa with 0.6 opacity */
-background: rgba(38,38,38,0.25);
-/* For IE 5.5 - 7*/
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-/* For IE 8*/
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-}
+padding: 10px;
+background-color: rgba(38,38,38,0.80);
 /* curved border radius */
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
 
-/*****************************white color******************************/
+/*****************************white color******************************
 background-color: #FFF;
 /*****************************white color******************************/
 }
 
 nav {
-width: 940px;
 height: 50px;
 margin: 0 auto;
-.alpha60 {
-/* Fallback for web browsers that doesn't support RGBa */
-background: rgb(0, 0, 0) transparent;
-/* RGBa with 0.6 opacity */
-background: rgba(0, 0, 0, 0.6);
-/* For IE 5.5 - 7*/
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-/* For IE 8*/
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-}
 margin-top: -5px;
+color: #FFF;
 }
 
 #main {
 width: 940px;
 margin: 0 auto;
 padding-top: 30px;
-background: .alpha60 {
-background: rgb(0, 0, 0) transparent;
-/* RGBa with 0.6 opacity */
-background: rgba(0, 0, 0, 0.6);
-/* For IE 5.5 - 7*/
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-/* For IE 8*/
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-}
-repeat-y;
 overflow: hidden;
 }
 
@@ -107,6 +79,7 @@ width: 220px;
 
 footer {
 width: 940px;
+color: #FFF;
 margin: 0 auto;
 clear: both;
 }
@@ -150,7 +123,7 @@ line-height: normal;
 
 nav .menu li {
 display: block;
-float: left;
+float: right;
 }
 
 nav .menu a {
@@ -159,7 +132,7 @@ float: left;
 margin-right: 5px;
 padding: 0px 15px;
 text-decoration: none;
-color: #000;
+color: #FFF;
 }
 
 nav .menu a:hover {
@@ -250,16 +223,7 @@ margin: -15px 0 15px 25px;
 }
 
 #footer-area {
-.alpha60 {
-/* Fallback for web browsers that doesn't support RGBa */
-background: rgb(0, 0, 0) transparent;
-/* RGBa with 0.6 opacity */
-background: rgba(0, 0, 0, 0.6);
-/* For IE 5.5 - 7*/
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-/* For IE 8*/
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-}
+
 color: #000;
 font-size: 90%;
 padding: 18px 0;
@@ -290,7 +254,7 @@ margin: -15px 0;
 }
 
 footer a:link, footer a:visited {
-color: #333;
+color: #FFF;
 }
 
 footer a:hover { 
@@ -299,81 +263,45 @@ text-decoration: underline;
 
 footer p {
 margin-top: -15px;
-color: #000;
+color: #FFF;
 }
 
-/* search */
 
-#search #searchEntry {
-  background-color:#EEEEEE;
-  border-bottom-color:#CCCCCC;
-  border-bottom-left-radius:5px 5px;
-  border-bottom-right-radius:5px 5px;
-  border-bottom-style:solid;
-  border-bottom-width:1px;
-  border-left-color:#CCCCCC;
-  border-left-style:solid;
-  border-left-width:1px;
-  border-right-color:#CCCCCC;
-  border-right-style:solid;
-  border-right-width:1px;
-  border-top-color:#CCCCCC;
-  border-top-left-radius:5px 5px;
-  border-top-right-radius:5px 5px;
-  border-top-style:solid;
-  border-top-width:1px;
-  padding-bottom:5px;
-  padding-left:5px;
-  padding-right:5px;
-  padding-top:0px;
-  text-align:center;
-  width:330px;
+fieldset.search {
+	border: none;
+	width: 243px;
+	margin: 0 auto;
+	background: #D19C42;
 }
-#search #searchBox, #search #locationBox {
-  font-size:16px;
-  width:320px;
+.search input, .search button {
+	border: none;
+	float: left;
 }
-#search #searchOptionsCtrl {
-  font-size:11px;
+.search input.box {
+	color: #D19C42;
+	font-size: 1.2em;
+	width: 190px;
+	height: 30px;
+	padding: 8px 5px 0;
+	background: #D19C42
+	margin-right: 5px;
 }
-#search #searchOptions {
-  margin-bottom:0;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:10px;
-  text-align:center;
+.search input.box:focus {
+	background: #616161 url(search_bg.gif) no-repeat left -38px;
+	outline: none;
 }
-#search #searchOptions table {
-  margin-bottom:0;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:0;
+.search button.btn {
+	width: 38px;
+	height: 38px;
+	cursor: pointer;
+	text-indent: -9999px;
+	background: #fbc900 
 }
-#search #searchOptions th {
-  color:#333333;
-  font-weight:normal;
-  padding-bottom:5px;
-  padding-left:0;
-  padding-right:10px;
-  padding-top:0;
-  text-align:right;
-  vertical-align:middle;
-  white-space:nowrap;
+.search button.btn:hover {
+	background: 
 }
-#search #searchOptions td {
-  font-size:13px;
-  padding-bottom:5px;
-  text-align:left;
-  vertical-align:middle;
-}
-#search #searchOptions .option {
-  font-size:13px;
-  width:125px;
-}
-#search #searchButton input {
-  font-size:16px;
-  margin-top:5px;
-}
+
+
 
 /**********************
 Table Styles
@@ -381,13 +309,34 @@ Table Styles
 img.bookimage {
   width: 100px;
   height: auto;
+  padding-bottom: 10px;
+}
+
+img#logo {
+  display: block;
+  margin: 0 auto;
 }
 
 td.booktitle {
-  
+  padding: 0 10px;
+  font-size: 1.2em;
 }
 
 td.beermelink {
-  
+  width: 100px;
 }
 
+a.beerme {
+	font: bold 18px;
+	background-color: red;
+	color: #fff;
+	text-shadow: 0px 0px 5px #000;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 4px 12px 8px 16px;
+	text-decoration: none;
+  -webkit-box-shadow: inset 0px 0px 3px #f77;
+	-moz-box-shadow: inset 0px 0px 3px #f77;
+	box-shadow: inset 0px 0px 3px #f77;
+}

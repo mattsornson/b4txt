@@ -3,14 +3,15 @@
 	<nav><!-- top nav -->
 		<div class="menu">
 			<ul>
+			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
+			  <li>|</li>
 				<li><a href="/">Home</a></li>
-				<li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
 			</ul>
 		</div>
 	</nav><!-- end of top nav -->
     
-  <header><!-- header -->
-		<img src="images/logo.png" alt=""><!-- header image -->
+  <header><!-- header -->  
+		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
   
 	<section id="main"><!-- #main content and sidebar area -->
@@ -21,7 +22,7 @@
   		<tr>
   			<td><%= image_tag b["image"], {:class => "bookimage"} %></td>
   			<td class="booktitle"><%= b["title"] %></td>
-  			<td class="beermelink"><a href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</td>
+  			<td class="beermelink"><a class="beerme" href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</td>
   		</tr>
   	<% end %>
   </table>
@@ -32,7 +33,7 @@
 		<section id="footer-area">
 
 		
-					  <p align="center">&copy; 2010 <a href="#">beerfortextbooks.com</a></p>
+					  <p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
 			 
 
 		</section><!-- end of footer-area -->

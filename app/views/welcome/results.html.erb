@@ -1,3 +1,11 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.beerme_results').click(function() {
+			console.log($(this).data("link"));
+			window.location.href = $(this).data("link");
+		});
+	});
+</script>
 <div id="wrapper"><!-- #wrapper -->
 	<nav><!-- top nav -->
 		<div class="menu">
@@ -20,7 +28,9 @@
 	    
 	      <div class="bookimage"><%= image_tag b["image"], {:class => "bookimage"} %></div>
 	      <div class="booktitle"><p><%= b["title"] %></p></div>
-	      <div class="beerlink"><a class="beermelink" href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</a></div>
+	      <div class="beerlink">
+		
+		<button class="beerme_results" data-link="<%= "/beer_me?q=" + b["isbn10"] %>">Sell for Beer</button></div>
 	    
 	  </div>
 	<% end %>

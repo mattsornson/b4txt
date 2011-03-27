@@ -35,6 +35,7 @@ class WelcomeController < ApplicationController
       end
       
       if Books.isIsbn?(@isbn)
+        @book = Books.getBookByIsbn(@isbn)
         @book_prices = Books.getBuybackInfoByIsbn(@isbn)
         @merchants = @book_prices["page"]["offers"]["merchant"]
         @prices = {}

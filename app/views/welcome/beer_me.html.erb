@@ -1,3 +1,12 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.beerme').click(function() {
+			console.log($(this).data("link"));
+			window.location.href = $(this).data("link");
+		});
+	});
+</script>
+
 <div id="wrapper"><!-- #wrapper -->
 	<nav><!-- top nav -->
 		<div class="menu">
@@ -15,18 +24,33 @@
 	
 	<section id="main"><!-- #main content and sidebar area -->
 	  <p><%= flash[:notice ]%></p>
+	
+	  <div id="results_content" class="clearfix">
+		<div><%= image_tag @book["page"]["image"] %></div>
+		<div>
+			<p><%= @book["page"]["title"] %></p>
+			<p><%= @book["page"]["author"]%></p>
+			<p>ISBN10: <%= @book["page"]["isbn10"]%></p>
+			<p>ISBN13: <%= @book["page"]["isbn13"]%></p>
+		</div>
+	</div>
+	
 	  <% @merchants.each do |m| %>
-	    <div id="beerlisting">
-    	  <div class="merchantimage">
+	    <div id="results_content" class="clearfix">
+    	  <div class="bookimage">
     	    <%= image_tag m["merchant_image"] %>
     	  </div>
-    	  <div class="prices">
-    	    <%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
-    		 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
-    				@prices[m["merchant_id"]]["bottles"].to_s + " bottles" %>
+		  <div class="prices_low">
+			<%= m["prices"]["price"][0] %>
+		  </div>
+    	  <div class="beer_prices">
+			<span><%= image_tag "/images/keg.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["kegs"].to_s %></span>
+			<span><%= image_tag "/images/caseofbeer.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["cases"].to_s %></span>
+			<span><%= image_tag "/images/beerbottle_small.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["bottles"].to_s%></span>
     		</div>
     	  <div class="beerlink2">
-    	    <%= link_to "Sell for Beer", m["link"], {:class => "beermelink2"} %>
+			<button class="beerme" data-link="<%= m["link"] %>">Sell Textbook for Beer</button>
+			
     	  </div>
   	  </div>
 	  <% end %>

@@ -1,0 +1,8 @@
+production:
+    app_id: '198767263489250'
+    secret: '1e9c7a5beefc171590f1c28f1179ca74'
+    api_key: '23b397537bda5ec99ffbcc9ac33607e3'
+development:
+    app_id: '198767263489250'
+    secret: '1e9c7a5beefc171590f1c28f1179ca74'
+    api_key: '23b397537bda5ec99ffbcc9ac33607e3'

@@ -13,16 +13,45 @@
 		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
 	
-	<div id="description">
-	  <p id="first">1st - type in textbook isbn, title, author, or keyword.</p>
-
-    <p id="second">2nd - choose your favorite beer. "suggest beer."</p>
-
-    <p id="third">3rd - BEER ME - sell your textbooks for beer money.</p>
-	</div>
-	
-	
 	<p><%= flash[:notice ]%></p>
+	
+	<div id='page'>
+    <div id='menu'>
+      <img src='images/bottles/arcadia.png' title='arcadia' alt='' />
+      <img src='images/bottles/becks.png' title='becks' alt='' />
+      <img src='images/bottles/budlight.png' title='budlight' alt='' />
+      <img src='images/bottles/coors.png' title='coors' alt='' />
+      <img src='images/bottles/corona.png' title='corona' alt='' />
+      <img src='images/bottles/guinness.png' title='guinness' alt='' />
+      <img src='images/bottles/heineken.png' title='heineken' alt='' />
+      <img src='images/bottles/keystone.png' title='keystone' alt='' />
+      <img src='images/bottles/labatt.png' title='labatt' alt='' />
+      <img src='images/bottles/miller.png' title='miller' alt='' />
+      <img src='images/bottles/rollingrock.png' title='rollingrock' alt='' />
+      <img src='images/bottles/samadams.png' title='samadams' alt='' />
+    </div>
+  </div>
+  
+	<script type="text/javascript">
+
+	
+	$(document).ready(function(){
+	  
+	  //the most commonly used options are likely to be align, size and labels, closely followed
+    //by fadeIn and inactivity (the other options are probably for the more advanced user)
+    var opts =
+      // horizontal Dock with images expanding downwards in the vertical axis...
+      { align: 'top'
+      // set the maximum minor axis (vertical) image dimension to 48px
+      , size: 48
+      // add labels..
+      , labels: true
+      // swap the GIF extension for PNG extension for the larger image...
+      , source: function(i){ return this.src.replace(/gif$/,'png'); }
+      };
+    $('#menu').jqDock(opts);
+  });
+	</script>
 	
   <form action="/results" method="GET">
     <div id="search-box-large">
@@ -30,6 +59,14 @@
       <input class="search-submit" type="image" id="defaultsearch" src="images/search-submit.png" />
     </div>
   </form>
+  
+  <div id="description">
+	  <p id="first">1st - type in textbook isbn, title, author, or keyword.</p>
+
+    <p id="second">2nd - choose your favorite beer. "suggest beer."</p>
+
+    <p id="third">3rd - BEER ME - sell your textbooks for beer money.</p>
+	</div>
 
 	
 	<footer>

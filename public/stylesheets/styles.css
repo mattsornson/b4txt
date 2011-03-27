@@ -433,4 +433,24 @@ div.booktitle {
 div#description {
   width: 450px;
   margin: 0 auto;
+  padding: 20px 0;
 }
+
+
+
+/*position and hide the menu initially - leave room for menu items to expand...*/
+#page {
+  padding: 20px;
+  width:100%;
+}
+#menu {
+  width:100%; 
+  display:none;
+}
+/*dock styling...*/
+/*...centre the dock, and give the wrapper a background and partial border...*/
+#menu div.jqDockWrap {
+  margin:0 auto; 
+}
+/*...set the cursor...*/
+#menu div.jqDock {cursor:pointer;}

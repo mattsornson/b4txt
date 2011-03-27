@@ -15,35 +15,23 @@
 	</header><!-- end of header -->
 	
 	<section id="main"><!-- #main content and sidebar area -->
-
    <table>
-   	<tr>
-   		<td>Merchant</td>
-   		<td>Price</td>
-   		<td>Buy</td>
-   	</tr>
    	<% @merchants.each do |m| %>
-   		<tr>
+   		<tr class="listing">
    			<td><%= image_tag m["merchant_image"] %></td>
-   			<td><%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
+   			<td class="booze"><%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs, " +
    			 		@prices[m["merchant_id"]]["cases"].to_s + " cases, " + 
    					@prices[m["merchant_id"]]["bottles"].to_s + " bottles" %></td>
-   			<td><%= link_to "Sell for Beer", m["link"], {:class => "beerme"} %></td>
+   			<td><%= link_to "Sell for Beer", m["link"], {:class => "beermelink"} %></td>
    		</tr>
    	<% end %>
    </table>
-     
 </section><!-- end of #main content and sidebar-->
-	
-		<footer>
-		<section id="footer-area">
 
-		
-					  <p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
-			 
-
-		</section><!-- end of footer-area -->
+  <footer>
+		  <section id="footer-area">
+  			<p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
+  		</section><!-- end of footer-area -->
 	</footer>
-	
 </div>
 <!-- #wrapper -->

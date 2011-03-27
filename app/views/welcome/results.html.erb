@@ -1,5 +1,4 @@
 <div id="wrapper"><!-- #wrapper -->
-
 	<nav><!-- top nav -->
 		<div class="menu">
 			<ul>
@@ -9,35 +8,27 @@
 			</ul>
 		</div>
 	</nav><!-- end of top nav -->
-    
+	
   <header><!-- header -->  
 		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
 	</header><!-- end of header -->
-  
+	
 	<section id="main"><!-- #main content and sidebar area -->
-
-
-  <table>
-  	<% @books.each do |b| %>
-  		<tr>
-  			<td><%= image_tag b["image"], {:class => "bookimage"} %></td>
-  			<td class="booktitle"><%= b["title"] %></td>
-  			<td class="beermelink"><a class="beerme" href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</td>
-  		</tr>
-  	<% end %>
-  </table>
-
-</section><!-- end of #main content and sidebar-->
+	  
+	  <div id="content">
+	    <% @books.each do |b| %>
+	      <div><%= image_tag b["image"], {:class => "bookimage"} %></div>
+	      <div class="booktitle"><%= b["title"] %>
+	      <div class="beerlinktd"><a class="beermelink" href="/beer_me?q=<%= b["isbn10"] %>"> Beer Me!</a></div>
+	    <% end %>
+	  </div>
+	  
+  </section><!-- end of #main content and sidebar-->
 	
-		<footer>
-		<section id="footer-area">
-
-		
-					  <p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
-			 
-
-		</section><!-- end of footer-area -->
-	</footer>
-	
+	<footer>
+	    <section id="footer-area">
+				<p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
+	    </section><!-- end of footer-area -->
+  </footer>
 </div>
 <!-- #wrapper -->

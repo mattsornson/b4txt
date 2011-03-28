@@ -1,7 +1,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.beerme').click(function() {
-			console.log($(this).data("link"));
 			window.location = $(this).data("link");
 			return false;
 		});
@@ -50,7 +49,7 @@
 			<span><%= image_tag "/images/beerbottle_small.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["bottles"].to_s%></span>
     		</div>
     	  <div class="beerlink2">
-			<button type="button" class="beerme" data-link="<%= m["link"] %>">Sell Textbook for Beer</button>
+			<input class="beerme" type="button" data-link="<%= m["link"] %>" value="Sell Textbook for Beer"></input>
 			
     	  </div>
   	  </div>

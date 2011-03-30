@@ -11,13 +11,18 @@ class WelcomeController < ApplicationController
       @keywords = params[:q]
       @brand = params[:brand]
       if Books.isIsbn?(@keywords)
-        redirect_to :action => :beer_me, :q => @keywords
+        @isbn = @keywords.tr('-', '').tr('x', '').tr('X', '')
+        redirect_to :action => :beer_me, :q => @isbn
       else
         @search_pages = Books.getSearchPages(@keywords)
         if @search_pages.nil?
           flash[:notice] = "Sorry, we drank too much beer and had an error."
           redirect_to :root
         else
+          if @search_pages["page"].nil?
+            no_book_error
+            return
+          end
           @books = @search_pages["page"]["results"]["book"]
         end
       end
@@ -36,8 +41,14 @@ class WelcomeController < ApplicationController
       end
       
       if Books.isIsbn?(@isbn)
+        @isbn = @isbn.tr('-', '').tr('x', '').tr('X', '')
+        
         @book = Books.getBookByIsbn(@isbn)
         @book_prices = Books.getBuybackInfoByIsbn(@isbn)
+        if @book_prices["page"].nil?
+          no_book_error
+          return
+        end
         @merchants = @book_prices["page"]["offers"]["merchant"]
         @prices = {}
         if @merchants.nil?

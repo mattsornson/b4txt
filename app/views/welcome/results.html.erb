@@ -1,27 +1,5 @@
-<script type="text/javascript">
 
-	$(document).ready(function() {
-		$('.beerme_results').click(function() {
-			window.location = $(this).data("link");
-			return false;
-		});
-	});
-	
-</script>
-<div id="wrapper"><!-- #wrapper -->
-	<nav><!-- top nav -->
-		<div class="menu">
-			<ul>
-			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
-			  <li>|</li>
-				<li><a href="/">Home</a></li>
-			</ul>
-		</div>
-	</nav><!-- end of top nav -->
-	
-  <header><!-- header -->  
-		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
-	</header><!-- end of header -->
+
 	
 	<section id="main"><!-- #main content and sidebar area -->
 	 <p><%= flash[:notice ]%></p>
@@ -36,17 +14,9 @@
 		<% b["isbn10"] = b["isbn13"] %>
 		<% end %>
 		
-		<input class="beerme_results" type="button" data-link="<%= "http://www.beerfortextbooks.com/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>" value="Sell for Beer"></input></div>
+		<a class="beerme_results" href="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</a></div>
 	    
 	  </div>
 	<% end %>
 	  
   </section><!-- end of #main content and sidebar-->
-	
-	<footer>
-	    <section id="footer-area">
-				<p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
-	    </section><!-- end of footer-area -->
-  </footer>
-</div>
-<!-- #wrapper -->

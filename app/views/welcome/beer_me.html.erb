@@ -1,27 +1,3 @@
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('.beerme').click(function() {
-			window.location = $(this).data("link");
-			return false;
-		});
-	});
-</script>
-
-<div id="wrapper"><!-- #wrapper -->
-	<nav><!-- top nav -->
-		<div class="menu">
-			<ul>
-			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
-			  <li>|</li>
-				<li><a href="/">Home</a></li>
-			</ul>
-		</div>
-	</nav><!-- end of top nav -->
-    
-  <header><!-- header -->
-		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
-	</header><!-- end of header -->
-	
 	<section id="main"><!-- #main content and sidebar area -->
 	  <p><%= flash[:notice ]%></p>
 	
@@ -33,6 +9,13 @@
 			<p>ISBN10: <%= @book["page"]["isbn10"]%></p>
 			<p>ISBN13: <%= @book["page"]["isbn13"]%></p>
 		</div>
+	</div>
+	
+	<div id="results_content" class="clearfix">
+		<div class="bookimage"></div>
+		<div class="prices_low"></div>
+		<div class="beer_prices"><span>kegs</span><span>cases</span><span>bottles</span></div>
+		<div class="beerlink2"></div>
 	</div>
 	
 	  <% @merchants.each do |m| %>
@@ -47,20 +30,16 @@
 			<span><%= image_tag "/images/keg.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["kegs"].to_s %></span>
 			<span><%= image_tag "/images/caseofbeer.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["cases"].to_s %></span>
 			<span><%= image_tag "/images/beerbottle_small.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["bottles"].to_s%></span>
+			
     		</div>
+<div id="twitter">
+	<a id="twitter" href="http://twitter.com/share" class="twitter-share-button" data-text="I sold my textbooks for beer at BeerForTextbooks.com <%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs " + @prices[m["merchant_id"]]["cases"].to_s + " cases " + @prices[m["merchant_id"]]["bottles"].to_s + " bottles" %>" data-url="http://www.beerfortextbooks.com" data-count="none" data-via="beer4textbooks">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
     	  <div class="beerlink2">
-			<input class="beerme" type="button" data-link="<%= m["link"] %>" value="Sell Textbook for Beer"></input>
+				
+			<a class="beerme" type="button" href="<%= m["link"] %>">Sell Textbook for Beer</a>
 			
     	  </div>
   	  </div>
 	  <% end %>
 	  
 </section><!-- end of #main content and sidebar-->
-
-  <footer>
-		  <section id="footer-area">
-  			<p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
-  		</section><!-- end of footer-area -->
-	</footer>
-</div>
-<!-- #wrapper -->

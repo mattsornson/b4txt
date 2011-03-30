@@ -1,7 +1,4 @@
-<div id="wrapper"><!-- #wrapper -->    
-  <header><!-- header -->
-		<a href="/"><img id="logo" src="images/logo.png" alt=""></a><!-- header image -->
-	</header><!-- end of header -->
+
 	
 	
   
@@ -10,7 +7,8 @@
       var opts =
         { align: 'top'
         , size: 128
-        , labels: true
+        , labels: true,
+		distance: 0
         , source: function(i){ return this.src.replace(/gif$/,'png'); }
         };
       $('#menu').jqDock(opts);
@@ -30,7 +28,7 @@
   <div class="steps">
   <ul id="description" class="clearfix">
 
-  	<li id="pick"><p>pick your currency</p>
+  	<li id="pick"><p>PICK YOUR CURRENCY</p>
       <div id='page'>
         <div id='menu'>
           <img class="bottle selected" src='images/bottles/budlight.png' name='bud' id='budlight' />
@@ -60,22 +58,4 @@
   </form>
 
 	
-	<footer>
-	  
-	  <nav><!-- top nav -->
-  		<div class="menu">
-  			<ul>
-  			  <li><a href="/about">About Us</a></li>
-  			  <li>|</li>
-  			  <li><a href="mailto:beerfortextbooks@gmail.com">Contact</a></li>
-  			  <li>|</li>
-  				<li><a href="/">Home</a></li>
-  			</ul>
-  		</div>
-  	</nav><!-- end of top nav -->
-	  
-  	<section id="footer-area">
-  		<p align="center">&copy; 2011 <a href="#">beerfortextbooks.com</a></p>
-  	</section><!-- end of footer-area -->
-  </footer>
-</div><!-- #wrapper -->
+

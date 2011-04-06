@@ -1,0 +1,747 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+
+h4 a:link, h4 a:visited {
+	color: #999;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* render html5 elements as block */
+header, footer, section, aside, nav, article {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background-attachment: fixed;
+  background-color: #333;
+  background-image: url(http://wmusailing.org/wp-content/uploads/2011/03/lettuce1.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #FFF;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+#beta_stamp {
+	z-index: 9999;
+	position: relative;
+	float: left;
+	top: -65px;
+	left: -50px;
+}
+	
+/* layout */
+
+#wrapper {
+  width: 940px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 0;
+  padding: 10px;
+  background-color: rgba(38,38,38,0.80);
+  
+/* curved border radius */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+}
+
+#main {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  top: -75px;
+}
+
+#content {
+  float: left;
+  width: 640px;
+  margin-left: 30px;
+}
+
+#sidebar {
+  float: right;
+  padding-left: 20px;
+  width: 220px;
+}
+
+footer {
+  width: 940px;
+  color: #FFF;
+  margin: 0 auto;
+  clear: both;
+}
+
+/* basics */
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+  clear: both;
+}
+
+
+
+p {
+  margin-bottom: 18px;
+}
+
+li {
+  padding-left: 5px;
+}
+
+/* nav */
+
+nav {
+  height: 50px;
+  margin-top: 0px;
+  text-shadow: 1px 1px 1px #666;
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, serif;
+  text-align: center;
+}
+
+nav .menu {
+  font-size: 14px;
+	text-align: center;
+}
+
+nav .menu ul {
+  
+  padding: 0px 0 0 20px;
+  list-style: none;
+  line-height: normal;
+}
+
+nav .menu li {
+  display: block;
+  float: left;
+}
+
+nav .menu a:link, nav .menu a:visited {
+  display: block;
+  float: left;
+  margin-right: 5px;
+  padding: 0px 15px;
+  text-decoration: none;
+  color: #ccc;
+}
+
+nav .menu a:hover {
+  text-decoration: underline;
+}
+
+/** HEADER */
+
+header {
+  padding: 20px 0 0 0;
+  border: 0;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 0px 4px #ffcc00, -1px -1px 0px #666, 2px 2px 0px #000;
+  color: #FFFFFF;
+}
+
+header a:link, header a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#wrapper h4 {
+	font-size: 14px;
+	font-family: "Helvetica Neue", arial, serif;
+	text-shadow: none;
+	color: #999;
+}
+
+header>h1 {
+  margin-left:auto;
+  margin-right:auto;
+  width: 600px;
+  font-size: 40px;
+  line-height: 36px;
+  position: relative;
+  top: -125px;
+}
+
+header>h1 a:link, a:visited {
+  color: #0A67A2;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 2px 3px #555;
+}
+
+header>h2 {
+  color: #777;
+  clear: right;
+  float: right;
+  font-style: italic;
+  font-size: 14px;
+  margin: 14px 10px 18px 0;
+}
+
+/** ARTICLES **/
+article img {
+  border: none;
+  -webkit-box-shadow: 3px 3px 7px #777;
+  -moz-box-shadow: 3px 3px 7px #777;
+}
+
+#content p, ul, ol, hr {
+  margin-bottom: 24px;
+}
+
+#content ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+}
+
+#content h1, h2, h3, h4, h5, h6 {
+  color: #0A67A2;
+  margin: 0 0 20px 0;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.alignleft, img.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+}
+
+.alignright, img.alignright {
+  display: inline;
+  float: right;
+  margin-left: 10px;
+}
+
+.aligncenter, img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* sidebar and footer widget blocks */
+
+aside h3 {
+  font-size: 18px;
+  color: #0A67A2;
+}
+
+aside ul {
+  list-style: square;
+  color: #bbb;
+  margin: -15px 0 15px 25px;
+}
+
+#footer-area {
+  color: #000;
+  font-size: 90%;
+  margin-top: 20px;
+  padding: 18px 0;
+  overflow: hidden;
+/* curved border radius */
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+}
+
+.footer-segment {
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 190px;
+}
+
+footer aside h4 {
+  color: #0A67A2;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+footer ul {
+  list-style: none;
+  margin: -15px 0;
+}
+
+footer a:link, footer a:visited {
+  color: #FFF;
+}
+
+footer a:hover { 
+  text-decoration: underline; 
+}
+
+footer p {
+  margin-top: -15px;
+  color: #FFF;
+}
+
+
+
+
+/**********************
+links and images
+**********************/
+img.bookimage {
+  width: 70px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+img#logo {
+ display: block;
+ width: 700px;
+ padding-left: 20px;
+}
+
+.beermelink {
+	font: bold 16px;
+	background-color: red;
+	color: #FFF;
+	text-shadow: 0px 0px 5px #FFF;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 4px 12px 8px 16px;
+	text-decoration: none;
+  -webkit-box-shadow: 0px 0px 3px #FFF;
+	-moz-box-shadow: 0px 0px 3px #FFF;
+}
+
+.beermelink:visited {
+  color: #FFF;
+}
+
+/************results page***************/
+
+#results_content {
+  clear: both;
+  width: 100%;
+  background: rgba(255,255,255,1);
+  margin: 0px 10px 0px 10px;
+  color: #333;
+}
+
+#results_content div {
+  float: left;
+  padding: 10px;
+}
+
+#results_content .beerlink2 {
+	float: right;
+	margin-right: 15px;
+}
+
+.bookimage {
+	padding: 10px;
+	width: 100px;
+}
+
+.prices_low {
+	margin: 10px 15px 10px 15px;
+	font-size: 20px;
+}
+
+.booktitle {
+	padding: 10px;
+	padding-top: 50px;
+	width: 65%;
+	position: relative;
+	top: 20px;
+	font-size: 24px;
+	line-height: 1.5em;
+	text-shadow: 1px 1px 1px #999;
+}
+
+.beerlink {
+	padding: 10px;
+  padding-top: 55px;
+}
+
+div.booktitle {
+  text-size: 1.4em;
+}
+/************Beer Me page***************/
+
+#beerlisting {
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#beerlisting div {
+  float: left;
+  background: rgba(255,255,255,0.1);
+}
+
+#beerlisting .beerlink2 {
+  width: 175px;
+  text-align: right;
+  padding: 10px;
+}
+
+.merchantimage {
+  padding: 10px;
+  width: 120px;
+}
+
+.prices {
+  padding: 10px;
+  width: 600px;
+}
+
+.facebook {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/************Search Box***************/
+
+#search-box-large {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px;
+	position: relative;
+	top: -115px;
+}
+.search-input-large {
+	float: left;
+  background-color:#FFFFFF;
+  border-bottom-color:#ffcc00;
+  border-bottom-left-radius:10px 10px;
+  border-bottom-right-radius:10px 10px;
+  border-bottom-style:solid;
+  border-bottom-width:2px;
+  border-left-color:#ffcc00;
+  border-left-style:solid;
+  border-left-width:2px;
+  border-right-color:#ffcc00;
+  border-right-style:solid;
+  border-right-width:2px;
+  border-top-color:#ffcc00;
+  border-top-left-radius:10px 10px;
+  border-top-right-radius:10px 10px;
+  border-top-style:solid;
+  border-top-width:2px;
+  color:#888888;
+  font-size:20px;
+  width:70%;
+  padding: 10px;
+	position: relative;
+  
+}
+input[type=submit], input[type=button], button {
+  	float: left;
+	color: #08233e;
+	font:2.4em Futura, 'Century Gothic', AppleGothic, sans-serif;
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	border:1px solid #ffcc00;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	font-size: 20px;
+	position: relative;
+	background:url(/images/overlay.png) repeat-x center #ffcc00;
+	border-bottom:1px solid #9f9f9f;
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	cursor:pointer;
+	background-color:rgba(255,204,0,1);
+	width: 200px;
+}
+
+input[type=submit].home_submit {
+	top: -1px;
+	left: 10px;
+	position: relative;
+}
+
+input[type=button].beerme_results {
+	width: 150px;
+	position:relative;
+}
+
+input[type=button].beerme_results:active {
+	top: 27px;
+}
+
+input[type=button].beerme {
+	width: 250px;
+	position:relative;
+}
+
+input[type=button].beerme:active {
+	top: 2px;
+}
+
+input[type=submit].home_submit:active {
+	top: 2px;
+}
+
+.beer_prices {
+	width: 300px;
+	font-size: 30px;
+	line-height: 36px;
+	text-shadow: 1px 1px 1px #999;
+}
+
+.beer_prices span {
+	padding: 5px 10px 5px 10px;
+}
+
+.beerme, .beerme:visited {
+  	float: right;
+	color: #08233e;
+	font:2.4em Futura, 'Century Gothic', AppleGothic, sans-serif;
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	border:1px solid #ffcc00;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	font-size: 20px;
+	position: relative;
+	background:url(/images/overlay.png) repeat-x center #ffcc00;
+	border-bottom:1px solid #9f9f9f;
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	cursor:pointer;
+	background-color:rgba(255,204,0,1);
+	width: 200px;
+	text-decoration: none;
+}
+
+.beerme:active {
+	top: 2px;
+}
+
+.beerme:hover {
+	background-color:rgba(255,204,0,0.8);
+}
+
+.beerme_results:active {
+	top: 27px;
+}
+
+.beerme_results, .beerme_results:visited {
+	width: 125px;
+  	float: left;
+	color: #08233e;
+	font:2.4em Futura, 'Century Gothic', AppleGothic, sans-serif;
+	-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+	border:1px solid #ffcc00;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	font-size: 20px;
+	position: relative;
+	top: 25px;
+	background:url(/images/overlay.png) repeat-x center #ffcc00;
+	border-bottom:1px solid #9f9f9f;
+	-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+	cursor:pointer;
+	background-color:rgba(255,204,0,1);
+	text-decoration: none;
+	text-align: center;
+}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover {
+  background-color:rgba(255,204,0,0.8);
+}
+
+input[type=submit]:active,
+input[type=button]:active,
+button:active {
+  position:relative;
+  top:-8px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.steps li {
+	float: left;
+	width: 250px;
+	background: rgba(255,255,255,0.3);
+	margin: 10px;
+	height: 200px;
+	padding: 10px;
+	border: 1px solid #cccccc;
+}
+
+.steps h3 {
+	text-align: center;
+	font-size: 24px;
+	text-shadow: 1px 1px 3px #333;
+	color: #white;
+	font-family: Georgia, serif;
+	padding: 5px;
+	margin: 5px;
+}
+
+#pick {
+	width: 400px;
+	position: relative;
+	background: transparent;
+	border: none;
+	left: 75px;
+	top: -50px;
+	color: #ffcc00;
+}
+
+#type {
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	height: 125px;
+	background: none;
+	border: none;
+	position: relative;
+	top: 200px;
+	left: 0px;
+	color: #ffcc00;
+	z-index: 9999;
+	text-shadow: 1px 1px 1px #333;
+	width: 500px;
+}
+
+#type span {
+	font-size: 36px;
+	margin-right: 10px;
+	position: relative;
+	top: 7px;
+}
+
+#beer {
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background: none;
+	height: 125px;
+	border: none;
+	position: relative;
+	top: -100px;
+	left: 80px;
+	color: #ffcc00;
+	width: 300px;
+}
+
+.steps {
+	margin: 0 auto;
+	width: 900px;
+	text-align: center;
+}
+
+.steps p {
+	text-shadow: 1px 1px 1px #999;
+	font-size: 16px;
+}
+
+#search_arrow {
+	position: relative;
+	top: -110px;
+	left: -150px;
+}
+
+#beer_arrow {
+	position: relative;
+	top: -300px;
+	left: -200px;
+	z-index: 9999;
+}
+
+
+/*position and hide the menu initially - leave room for menu items to expand...*/
+#page {
+  padding: 20px;
+  width:100%;
+  z-index: 9999;
+  position: relative;
+  left: -50px;
+}
+
+#menu {
+  width:100%; 
+  display:none;
+}
+
+/*dock styling...*/
+/*...centre the dock, and give the wrapper a background and partial border...*/
+#menu div.jqDockWrap {
+  margin:0 auto; 
+}
+/*...set the cursor...*/
+#menu div.jqDock {cursor:pointer;}
+
+img.bottle {
+  padding: 0 10px;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+}
+
+img.bottle:hover {
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+
+img.selected {
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+
+.error {
+	color: red;
+	text-shadow: 1px 1px 1px #333333;
+}
+
+#twitter {
+	position: relative;
+	top: 15px;
+}
+
+#facebook {
+	position: relative;
+	top: 1px;
+	margin-left: 10px;
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="utf-8" />
+		<meta name="description" content ="Want to trade your college textbooks for beer? Trade your textbooks for beer at BeerForTextbooks.com. Walk into your liquor store, leave your books, and get your beer. It's that easy.">
+		
+		<title>Beer For Textbooks</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+		
+		<link  href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" rel="stylesheet" type="text/css" >
+
+		<%= stylesheet_link_tag [ "styles", "skins/tango/skin", "skins/ie7/skin", "sexybuttons" ] %>
+
+		<%= javascript_include_tag [ "jquery.min", "jquery.jcarousel.min", "application" ] %>
+
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<style type="text/css"> 
+ 
+/**
+ * Overwrite for having a carousel with dynamic width.
+ */
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 85%;
+}
+ 
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width: 100%;
+}
+ 
+</style>
+
+<%= csrf_meta_tag %>
+		 
+</head>
+<body>
+	<!-- top nav -->
+    <div id="header">
+  
+		
+		<div align="right" id="account">
+        <span> <a href="http://www.beerfortextbooks.com/myaccount/" title="Sign In" id	="signinlink">Sign In</a></span> 
+		<span class="gray">|</span> 
+		<span> 
+			<a href="http://www.beerfortextbooks.com/cart/" title="Beer Cart" id="BeerCart"> My Beer Cart</a></span> 
+            </div>	
+			<div id="logo" align="center"> <img src="images/b4txtlogo.png"></img> </div>
+		</div> 
+	
+
+     </div>
+    
+
+	<%= # this is a layout file
+		# example: when the index page is loaded, the contents of index.html.erb
+		# are loaded here. everything else in this layout is global.
+		
+		# views are html files mixed with Ruby code
+		# views are located in app/views/...
+		yield 
+	%>
+
+
+<div id="footer">
+        	<div class="column1">
+            	<p>
+            	<ul type="none"> 
+					<li>About</li> 
+					<li><a href="#" title="About">About</a></li> 
+					<li><a href="#" title="Why">Why Us?</a></li> 
+					<li><a href="#" title="Blog">The Blag</a></li> 
+				</ul>
+				</p>
+            </div><!-- end #column1 -->
+		
+            <div class="column2">
+            	<p>
+            	<ul type="none"> 
+					<li>Follow Us</li> 
+					<li><a href="http://www.facebook.com/BeerforTextbooks" title="Facebook">Facebook</a></li> 
+					<li><a href="http://twitter.com/beer4textbooks" title="Twitter">Twitter</a></li> 
+				</ul> 
+				</p>
+            </div><!-- end #column2 -->
+            <div class="column3">
+            	<p>
+            	<ul type="none"> 
+					<li>Questions?</li> 
+					<li><a href="#" title="FAQ">FAQ</a></li> 
+					<li><a href="#" title="Customer Service">Customer Service</a></li> 
+				</ul>
+				</p>
+            </div><!-- end #column3 -->
+            <div class="column4">
+            	<p>
+            	<ul type="none"> 
+					<li>Company</li> 
+					<li><a href="#" title="Our Start">Our Start</a></li> 
+					<li><a href="#" title="Press">Press</a></li> 
+					<li><a href="#" id="feedbacklink" title="Feedback">Feedback</a></li> 
+				</ul>
+				</p>
+            </div><!-- end #column4 -->
+ </div>			
+
+<div id="cright">   
+  
+				<div class="footer-copyright"> 
+		Copyright &#169; 2011 <a href="#" title="Beerfortextbooks.com">Beerfortextbooks.com</a> | <a href="#" title="termsandconditions">Terms and Conditions of Use</a>  | <a href="#" title="PrivacyPolicy">Security and Privacy Policy</a>  | <a href="#" title="SitMap">Site Map</a> 
+
+	</div>
+	</footer>
+
+</div><!-- #wrapper -->
+</body>
+</html>

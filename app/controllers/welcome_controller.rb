@@ -2,8 +2,10 @@ class WelcomeController < ApplicationController
   require 'pp'
   require 'bitly'
   
+  layout 'twopointoh'
+  
   def splash
-
+    render :index
   end
   
   def results
@@ -112,6 +114,6 @@ class WelcomeController < ApplicationController
   end
   
   def about
-    
+
   end
 end

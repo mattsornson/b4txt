@@ -352,7 +352,9 @@
 .sexybutton.sexysimple					{ background-color: #333; }		/* Default */
 .sexybutton.sexysimple.sexyblack		{ background-color: #333; }
 .sexybutton.sexysimple.sexyred		{ background-color: #a90118; }
-.sexybutton.sexysimple.sexyorange	{ background-color: #ff8a00; }
+.sexybutton.sexysimple.sexyorange	{ background-color: #D28703; 
+							background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFD73A), to(orange));
+							background: -moz-linear-gradient(top, #FFD73A, orange);}
 .sexybutton.sexysimple.sexyyellow	{ background-color: #ffb515; }
 .sexybutton.sexysimple.sexygreen		{ background-color: #59a901; }
 .sexybutton.sexysimple.sexyblue		{ background-color: #015ea9; }

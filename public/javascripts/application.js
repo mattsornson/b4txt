@@ -3,7 +3,9 @@
 	 
 	$(document).ready(function() {
 	    $('#mycarousel').jcarousel({
-	        visible: 7
+	        visible: 7,
+			buttonNextHTML: null,
+			buttonPrevHTML: null
 	    });
 	
 	    $('#beerselector img').click(function() {

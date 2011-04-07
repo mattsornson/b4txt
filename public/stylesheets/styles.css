@@ -152,17 +152,20 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 #beerselector img {
 	height: 170px;
 	width: 50px;
-	opacity:0.4;
-	filter: alpha(opacity=40);
 	padding: 10px;
 	position: relative;
 	top: 8px;
 	cursor: pointer;
 }
 
+#beerselector .heine {
+	height: 170px;
+	width: 58px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
 #beerselector img:hover {
-	opacity:0.8;
-    filter: alpha(opacity=80);
 	background: none;
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 0px 5px #333;
@@ -172,8 +175,6 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	/*background:-moz-linear-gradient(top, #ffd73a, #ffa500); 
 	background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffd73a), to(#ffa500));*/
 	background: none;
-	opacity:1.0;
-	filter: alpha(opacity=100);
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 0px 5px #333;
 }

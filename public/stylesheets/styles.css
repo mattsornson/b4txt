@@ -133,7 +133,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 }
 	
 #mycarousel, #mycarousel li {
-	height: 210px;
+	height: 170px;
 }
 
 /**
@@ -145,7 +145,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
  
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
     width: 100%;
-	height: 210px;
+	height: 170px;
 }
 
 #beerselector {
@@ -158,7 +158,11 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	margin-top: 20px;
 	text-align: center;
 	}
-	
+
+#beerselector img {
+	height: 170px;
+}
+
 #beerselector .large {
 	background-color: #D28703;
 	padding: 20px;

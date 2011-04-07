@@ -3,8 +3,13 @@
 	 
 	$(document).ready(function() {
 	    $('#mycarousel').jcarousel({
-	        visible: 8
+	        visible: 7
 	    });
+	
+	    $('#beerselector img').click(function() {
+			$('#beerselector img').removeClass("selected");
+			$(this).addClass("selected");
+		});
 	});
 	 
 

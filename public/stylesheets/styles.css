@@ -132,6 +132,22 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	width: 100%;
 }
 	
+#mycarousel, #mycarousel li {
+	height: 210px;
+}
+
+/**
+ * Overwrite for having a carousel with dynamic width.
+ */
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 85%;
+}
+ 
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width: 100%;
+	height: 210px;
+}
+
 #beerselector {
 	/*background-color: #fefdf1;
 	border: 3px solid #ffd900;
@@ -139,7 +155,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	border-radius: 10px;*/
 	padding: 5px;
 	margin: 10px;
-	margin-top: 50px;
+	margin-top: 20px;
 	text-align: center;
 	}
 	
@@ -206,7 +222,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	border-radius: 10px;*/
 	padding: 5px;
 	padding-top: 10px;
-	margin-top: 50px;
+	margin-top: 40px;
 	margin-bottom: 0px;
 	color: rgba(210, 135, 3, 0.8);
 	text-align: center;

@@ -260,14 +260,14 @@
 	font-size: 13px !important;
 	font-style: normal !important; 
 	font-weight: bold !important; 
-	color: #fff !important;
+	color: #CC1100 !important;
 	line-height: 1; 
 	background-image: url(/images/skins/simple/awesome-overlay-sprite.png);
 	background-repeat: repeat-x;
 	background-position: 0 0;
 	
 	/* Special effects */
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); 
+	text-shadow: 1px 1px 3px #d28703, -1px -1 2px #d28703; 
 	border-radius: 5px; 
 	-moz-border-radius: 5px; 
 	-webkit-border-radius: 5px; 
@@ -299,7 +299,7 @@
 .sexybutton.sexysimple:hover,
 .sexybutton.sexysimple:focus {
 	background-position: 0 -50px; 
-	color: #fff !important;
+	color: #660000 !important;
 }
 
 .sexybutton.sexysimple:active { 
@@ -354,7 +354,12 @@
 .sexybutton.sexysimple.sexyred		{ background-color: #a90118; }
 .sexybutton.sexysimple.sexyorange	{ background-color: #D28703; 
 							background: -webkit-gradient(linear, 0 0, 0 100%, from(#FFD73A), to(orange));
-							background: -moz-linear-gradient(top, #FFD73A, orange);}
+							background: -moz-linear-gradient(top, #FFD73A, orange);
+							}
+.sexybutton.sexysimple.sexyorange:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
 .sexybutton.sexysimple.sexyyellow	{ background-color: #ffb515; }
 .sexybutton.sexysimple.sexygreen		{ background-color: #59a901; }
 .sexybutton.sexysimple.sexyblue		{ background-color: #015ea9; }

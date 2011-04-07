@@ -119,6 +119,16 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	margin: 0px;
 
 	}
+
+#header a:link, #header a:visited, #header a:active {
+	color: #bbb;
+	text-decoration: none;
+}
+
+#header a:hover {
+	color: #333;
+	text-decoration: underline;
+}
 	
 #account {
 	margin: 0 auto;
@@ -130,6 +140,15 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 #content_container {
 	margin-top: 20px;
 	width: 100%;
+}
+
+#content_container a:link, #content_container a:visited, #content_container a:active {
+	text-decoration: none;
+	color: #CC1100;
+}
+
+#content_container a:hover {
+	color: #660000;
 }
 	
 #mycarousel, #mycarousel li {
@@ -166,9 +185,10 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 }
 
 #beerselector img:hover {
-	background: none;
+	background: url(/images/diamond.png) no-repeat;
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 0px 5px #333;
+	-moz-box-shadow: 0px 0px 5px #333;
 }
 
 #beerselector .selected, #beerselector .selected:hover {
@@ -177,6 +197,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	background: none;
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 0px 5px #333;
+	-moz-box-shadow: 0px 0px 5px #333;
 }
 
 #beerselector .large {
@@ -215,6 +236,10 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	margin-bottom: 5px;
 	}
 	
+.quiet {
+	color: #999;
+}
+	
 #value2 {
 	background-color: #fefdf1;
 	padding: 0px;
@@ -235,7 +260,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 
 #footer {
 	width: 100%;
-	height: 120px;
+	height: 150px;
 	/*background-color: #fefdf1;
 	border: 3px solid #feb101;
 	-moz-border-radius: 10px;
@@ -365,6 +390,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	position: relative;
 	top: -13px;
 	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
 	border: none;
 	border-left: 1px solid #d28703;;
 	border-radius: 0px;

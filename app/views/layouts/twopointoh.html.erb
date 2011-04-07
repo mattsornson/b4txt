@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="description" content ="Want to trade your college textbooks for beer? Trade your textbooks for beer at BeerForTextbooks.com. Walk into your liquor store, leave your books, and get your beer. It's that easy.">
 		
-		<title>Beer For Textbooks</title>
+		<title>Beer For Textbooks: Trade your textbooks for beer, today!</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 			<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
 		
@@ -42,12 +42,12 @@
   
 		
 		<div align="right" id="account">
-        <span> <a href="http://www.beerfortextbooks.com/myaccount/" title="Sign In" id	="signinlink">Sign In</a></span> 
+        <span><%= link_to "Sign In", "/myaccount" %></span> 
 		<span class="gray">|</span> 
 		<span> 
-			<a href="http://www.beerfortextbooks.com/cart/" title="Beer Cart" id="BeerCart"> My Beer Cart</a></span> 
+			<%= link_to "Beer Cart", "/cart" %></span> 
             </div>	
-			<div id="logo" align="center"> <img src="images/b4txtlogo.png"></img> </div>
+			<div id="logo" align="center"> <%= link_to image_tag('b4txtlogo.png'), "/" %> </div>
 		</div> 
 	
 
@@ -70,9 +70,9 @@
             	<p>
             	<ul type="none"> 
 					<li>About</li> 
-					<li><a href="#" title="About">About</a></li> 
-					<li><a href="#" title="Why">Why Us?</a></li> 
-					<li><a href="#" title="Blog">The Blag</a></li> 
+					<li><%= link_to "About", "/about" %></li> 
+					<li><%= link_to "Why Us?", "/why" %></li> 
+					<li><%= link_to "Blog", "/blog" %></li> 
 				</ul>
 				</p>
             </div><!-- end #column1 -->
@@ -81,8 +81,8 @@
             	<p>
             	<ul type="none"> 
 					<li>Follow Us</li> 
-					<li><a href="http://www.facebook.com/BeerforTextbooks" title="Facebook">Facebook</a></li> 
-					<li><a href="http://twitter.com/beer4textbooks" title="Twitter">Twitter</a></li> 
+					<li><%= link_to "Facebook", "http://www.facebook.com/BeerforTextbooks" %></li> 
+					<li><%= link_to "Twitter", "http://twitter.com/beer4textbooks" %></li> 
 				</ul> 
 				</p>
             </div><!-- end #column2 -->
@@ -90,8 +90,8 @@
             	<p>
             	<ul type="none"> 
 					<li>Questions?</li> 
-					<li><a href="#" title="FAQ">FAQ</a></li> 
-					<li><a href="#" title="Customer Service">Customer Service</a></li> 
+					<li><%= link_to "FAQ", "/faq" %></li> 
+					<li><%= link_to "Customer Service", "/customers" %></li> 
 				</ul>
 				</p>
             </div><!-- end #column3 -->
@@ -99,9 +99,10 @@
             	<p>
             	<ul type="none"> 
 					<li>Company</li> 
-					<li><a href="#" title="Our Start">Our Start</a></li> 
-					<li><a href="#" title="Press">Press</a></li> 
-					<li><a href="#" id="feedbacklink" title="Feedback">Feedback</a></li> 
+					<li><%= link_to "Our Start", "/history" %></li> 
+					<li><%= link_to "Press", "/press" %></li> 
+					<li><%= link_to "Feedback", "/contact" %></li>
+					<li><%= link_to "Careers", "/careers" %></li>
 				</ul>
 				</p>
             </div><!-- end #column4 -->

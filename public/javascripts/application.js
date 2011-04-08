@@ -8,10 +8,18 @@
 			buttonPrevHTML: null
 	    });
 	
-	    $('#beerselector img').click(function() {
-			$('#beerselector img').removeClass("selected");
-			$(this).addClass("selected");
+	    $('#beerselector li').click(function() {
+			$('#beerselector li').children().removeClass("selected");
+			$(this).children().addClass("selected");
 		});
+		
+		$('#beerselector li').hover(
+			function() {
+				$(this).children().addClass('hover');
+			},
+			function() {
+				$(this).children().removeClass('hover');
+			});
 	});
 	 
 

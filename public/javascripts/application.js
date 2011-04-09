@@ -11,6 +11,7 @@
 	    $('#beerselector li').click(function() {
 			$('#beerselector li').children().removeClass("selected");
 			$(this).children().addClass("selected");
+			setBeerName($(this).attr('name'));
 		});
 		
 		$('#beerselector li').hover(
@@ -21,5 +22,9 @@
 				$(this).children().removeClass('hover');
 			});
 	});
+	
+	function setBeerName(name) {
+		$('#beer_name').html(name);
+	}
 	 
 

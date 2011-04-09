@@ -4,13 +4,13 @@
 			
 
   <ul id="mycarousel" class="jcarousel-skin-tango"> 
-    	<li id="budlight" name="Bud Light"><img src="images/budlight.png" alt=""  ><img class="heart" src="images/heart.png" /></li> 
-        <li id="coorslight" name="Coors Light"><img src="images/coorslight.png" alt=""   ><img class="heart" src="images/heart.png" /></li> 
+    	<li id="bud" name="Bud Light"><img src="images/budlight.png" alt=""  ><img class="heart" src="images/heart.png" /></li> 
+        <li id="coors" name="Coors Light"><img src="images/coorslight.png" alt=""   ><img class="heart" src="images/heart.png" /></li> 
         <li id="heineken" name="Heineken"><img class="heine" src="images/Heineken.png" alt=""   ><img class="heart" src="images/heart.png" /></li> 
         <li id="keystone" name="Keystone"><img src="images/keystone.png" alt="" class="selected" ><img class="heart selected" src="images/heart.png"/></li> 
     	<li id="guinness" name="Guinness"><img src="images/guinness.png" alt="" ><img class="heart" src="images/heart.png" /></li> 
-        <li id="samadams" name="Sam Adams"><img src="images/SamuelAdams.png" alt=""  ><img class="heart" src="images/heart.png" /></li> 
-        <li id="millerlite" name="Miller Lite"><img src="images/millerbottle.png" alt=""  ><img class="heart" src="images/heart.png" /></li> 
+        <li id="sam_adams" name="Sam Adams"><img src="images/SamuelAdams.png" alt=""  ><img class="heart" src="images/heart.png" /></li> 
+        <li id="miller" name="Miller Lite"><img src="images/millerbottle.png" alt=""  ><img class="heart" src="images/heart.png" /></li> 
   </ul> 
  
 </div> 
@@ -19,11 +19,12 @@
 <div id="searchbar">        	
  <div id="value2">See how much <span id="beer_name" class="shout">Keystone</span> your book is worth!</div>
           
-		<form action="#" id="search_box">
+		<form action="/results" id="search_box">
    		  <div class="wrapper clearfix">
-        <input type="text" id="search" name="search" placeholder="ISBN - Title - Keyword" />
+        <input type="text" id="search" name="q" placeholder="ISBN - Title - Keyword" />
+		<input id="brand" type="hidden" name="brand" value="keystone" />
     		
-			<input type="submit" id="search_button" name="search_button" value="BEER ME" class="sexybutton sexysimple sexyorange sexyxxl" />
+			<input type="submit" id="search_button" value="BEER ME" class="sexybutton sexysimple sexyorange sexyxxl" />
 			</div>
 		</form>
       

@@ -6,7 +6,7 @@ class Beer < ActiveRecord::Base
   BEER_PRICES['coors'] = {:keg => 86.99, :case => 17.98, :bottle => 1.50}
   BEER_PRICES['miller'] = {:keg => 86.99, :case => 17.98, :bottle => 1.50}
   BEER_PRICES['heineken'] = {:keg => 112.99, :case => 26.99, :bottle => 2.25}
-  BEER_PRICES['corona'] = {:keg => 112.99, :case => 26.99, :bottle => 2.25}
+  BEER_PRICES['guinness'] = {:keg => 112.99, :case => 26.99, :bottle => 2.25}
   BEER_PRICES['sam_adams'] = {:keg => 86.99, :case => 17.98, :bottle => 1.50}
   
   def self.getPriceInBeers(brand, cost)

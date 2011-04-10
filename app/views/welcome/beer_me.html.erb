@@ -30,7 +30,7 @@
 		<div class="beer_price">
 			<span>
 				<%= image_tag "/images/keg.png", 
-				{:height => 40} %>
+				{:height => 50} %>
 			</span>
 			<span class="beer_count_kegs"><%= "  " +  
 				@prices[m["merchant_id"]]["kegs"].to_s %>
@@ -38,13 +38,13 @@
 			</span>
 			<span>
 				<%= image_tag "/images/caseofbeer.png", 
-				{:height => 40} %>
+				{:height => 50} %>
 			</span>
 			<span class="beer_count_cases"><%= "  " +  
 				@prices[m["merchant_id"]]["cases"].to_s %>
 			</span>
 			<span><%= image_tag "/images/beerbottle_small.png", 
-				{:height => 40} %>
+				{:height => 50} %>
 			</span>
 			<span class="beer_count_bottles"><%= "  " +  
 				@prices[m["merchant_id"]]["bottles"].to_s%>

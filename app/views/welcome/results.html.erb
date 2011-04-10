@@ -6,14 +6,19 @@
 	  <div class="search_result clearfix">
 	    
 	      <div class="book_cover"><%= image_tag b["image"], {:class => "cover_small"} %></div>
-	      <div class="book_info"><p><%= b["title"] %></p></div>
+	      <div class="book_info">
+			<p><%= b["title"] %></p>
+			<p class="quiet">Author: <%= b["author"] %></p>
+			<p class="quiet">Edition: <%= b["edition"] %></p>
+			<p class="quiet">Publisher: <%= b["publisher"] %></p>
+		  </div>
 	      <div class="book_sell">
 		
 			<% if b["isbn10"].nil? %>
 			<% b["isbn10"] = b["isbn13"] %>
 			<% end %>
 		
-			<a class="sell_button" href="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</a>
+			<a class="sell_button sexybutton sexysimple sexyorange sexyxxl" href="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</a>
 		
 		</div>
 	    

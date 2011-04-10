@@ -3,7 +3,7 @@ class Books < ActiveRecord::Base
   def self.getBookByIsbn(isbn)
     book = HTTParty.get("http://api.campusbooks.com/11/rest/bookinfo",
       :query => {:isbn => isbn,
-        :image_height => '100', :image_width => '80',
+        :image_width => '120',
         :format => 'xml', :key => API_KEY})["response"]
   end
   

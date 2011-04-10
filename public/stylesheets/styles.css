@@ -89,6 +89,7 @@ body {
 	  letter-spacing: 0em;
 	  word-spacing: 0em;
 	  line-height: 1.2;
+	background: #FFA437;
 }
 
 .small, small {
@@ -289,8 +290,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	border-radius: 10px;*/
 	padding: 5px;
 	padding-top: 10px;
-	margin-top: 200px;
-	margin-bottom: 0px;
+	margin-top: 100px;
 	color: rgba(210, 135, 3, 0.8);
 	text-align: center;
 	border-top: 1px solid rgba(210, 135, 3, 0.8);
@@ -423,6 +423,48 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 h1 { margin-bottom:0; }
 .read_article { color:#fff; display:block; font-size:12px; margin-bottom:30px; }
 
+/* Results and Purchase Pages */
+#search_results {
+	margin-top: 40px;
+	background: white;
+	border:1px solid #d28703;
+}
+
+.search_result {
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+}
+
+.search_result:nth-child(even) {
+	background: #eee;
+}
+
+.search_result:hover {
+	background: #ccc;
+	border-bottom: 1px solid #999;
+}
+
+.search_result div {
+	float: left;
+}
+
+.book_cover {
+	width: 20%;
+}
+
+.book_info {
+	width: 60%;
+}
+
+.book_sell {
+	width: 20%;
+	text-align: center;
+}
+
+.cover_small {
+	border: 1px solid #999;
+	-webkit-box-shadow: 1px 1px 5px #333;
+}
 
 /*Beer Selector */
 /*Class to set the width for the whole Carousel. You can set the width and height as you want */

@@ -1,22 +1,23 @@
 
 
 	
-	<section id="main"><!-- #main content and sidebar area -->
-	 <p><%= flash[:notice ]%></p>
+	<div id="search_results"><!-- #main content and sidebar area -->
 	<% @books.each do |b| %>
-	  <div id="results_content" class="clearfix">
+	  <div class="search_result clearfix">
 	    
-	      <div class="bookimage"><%= image_tag b["image"], {:class => "bookimage"} %></div>
-	      <div class="booktitle"><p><%= b["title"] %></p></div>
-	      <div class="beerlink">
+	      <div class="book_cover"><%= image_tag b["image"], {:class => "cover_small"} %></div>
+	      <div class="book_info"><p><%= b["title"] %></p></div>
+	      <div class="book_sell">
 		
-		<% if b["isbn10"].nil? %>
-		<% b["isbn10"] = b["isbn13"] %>
-		<% end %>
+			<% if b["isbn10"].nil? %>
+			<% b["isbn10"] = b["isbn13"] %>
+			<% end %>
 		
-		<a class="beerme_results" href="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</a></div>
+			<a class="sell_button" href="<%= "/beer_me?q=" + b["isbn10"] + "&brand=" + @brand %>">Sell for Beer</a>
+		
+		</div>
 	    
 	  </div>
 	<% end %>
 	  
-  </section><!-- end of #main content and sidebar-->
+  </div><!-- end of #main content and sidebar-->

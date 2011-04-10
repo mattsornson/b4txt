@@ -1,6 +1,4 @@
-	<section id="main"><!-- #main content and sidebar area -->
-	  <p><%= flash[:notice ]%></p>
-	
+	<div id="search_results"><!-- #main content and sidebar area -->
 	  <div id="results_content" class="clearfix">
 		<div><%= image_tag @book["page"]["image"] %></div>
 		<div>
@@ -11,7 +9,7 @@
 		</div>
 	</div>
 	
-	<div id="results_content" class="clearfix">
+	<div id="results_header" class="clearfix">
 		<div class="bookimage"></div>
 		<div class="prices_low"></div>
 		<div class="beer_prices"><span>kegs</span><span>cases</span><span>bottles</span></div>
@@ -19,12 +17,12 @@
 	</div>
 	
 	  <% @merchants.each do |m| %>
-	    <div id="results_content" class="clearfix">
-    	  <div class="bookimage">
+	    <div class="search_result clearfix">
+    	  <div class="book_cover">
     	    <%= image_tag m["merchant_image"] %>
     	  </div>
 		  <div class="prices_low">
-			<%= m["prices"]["price"][0] %>
+			$<%= m["prices"]["price"][0] %>
 		  </div>
     	  <div class="beer_prices">
 			<span><%= image_tag "/images/keg.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["kegs"].to_s %></span>
@@ -42,4 +40,4 @@
   	  </div>
 	  <% end %>
 	  
-</section><!-- end of #main content and sidebar-->
+</div><!-- end of #main content and sidebar-->

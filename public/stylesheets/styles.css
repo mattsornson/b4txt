@@ -430,6 +430,10 @@ h1 { margin-bottom:0; }
 	border:1px solid #d28703;
 }
 
+#results_header {
+	margin-bottom: 20px;
+}
+
 .search_result {
 	border-bottom: 1px solid #ccc;
 	padding: 20px;
@@ -450,6 +454,7 @@ h1 { margin-bottom:0; }
 
 .book_cover {
 	width: 20%;
+	text-align: center;
 }
 
 .book_info {
@@ -458,12 +463,46 @@ h1 { margin-bottom:0; }
 
 .book_sell {
 	width: 20%;
-	text-align: center;
+	text-align: right;
 }
 
 .cover_small {
 	border: 1px solid #999;
 	-webkit-box-shadow: 1px 1px 5px #333;
+}
+
+/** Affiliate sell page */
+
+.affiliate {
+	width: 15%;
+	text-align: center;
+}
+
+.low_price {
+	width: 10%;
+	text-align: center;
+}
+
+.beer_price {
+	width: 35%;
+	text-align: center;
+}
+
+.twitter {
+	width: 10%;
+	text-align: center;
+}
+
+.affiliate_link {
+	width: 30%;
+	text-align: right;
+}
+
+.affiliate_small {
+	width: 100px;
+	border: 1px solid #999;
+	padding: 5px 10px 5px 10px;
+	background: white;
 }
 
 /*Beer Selector */

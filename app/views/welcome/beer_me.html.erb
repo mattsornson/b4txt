@@ -1,5 +1,5 @@
-	<div id="search_results"><!-- #main content and sidebar area -->
-	  <div id="results_content" class="clearfix">
+<div id="search_results"><!-- #main content and sidebar area -->
+	<div id="results_content" class="clearfix">
 		<div><%= image_tag @book["page"]["image"] %></div>
 		<div>
 			<p><%= @book["page"]["title"] %></p>
@@ -8,36 +8,51 @@
 			<p>ISBN13: <%= @book["page"]["isbn13"]%></p>
 		</div>
 	</div>
-	
+
 	<div id="results_header" class="clearfix">
-		<div class="bookimage"></div>
+		<div class="book_cover"></div>
 		<div class="prices_low"></div>
-		<div class="beer_prices"><span>kegs</span><span>cases</span><span>bottles</span></div>
+		<div class="beer_prices">
+			<span>kegs</span><span>cases</span><span>bottles</span>
+		</div>
+		<div class="twitter">
 		<div class="beerlink2"></div>
 	</div>
-	
-	  <% @merchants.each do |m| %>
-	    <div class="search_result clearfix">
-    	  <div class="book_cover">
-    	    <%= image_tag m["merchant_image"] %>
-    	  </div>
-		  <div class="prices_low">
+
+	<% @merchants.each do |m| %>
+	<div class="search_result clearfix">
+		<div class="affiliate">
+			<%= image_tag m["merchant_image"], {:class => "affiliate_small"} %>
+		</div>
+		<div class="low_price">
 			$<%= m["prices"]["price"][0] %>
-		  </div>
-    	  <div class="beer_prices">
-			<span><%= image_tag "/images/keg.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["kegs"].to_s %></span>
-			<span><%= image_tag "/images/caseofbeer.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["cases"].to_s %></span>
-			<span><%= image_tag "/images/beerbottle_small.png", {:height => 40} %><%= "  " +  @prices[m["merchant_id"]]["bottles"].to_s%></span>
-			
-    		</div>
-<div id="twitter">
-	<a id="twitter" href="http://twitter.com/share" class="twitter-share-button" data-text="I sold my textbooks for beer at BeerForTextbooks.com <%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs " + @prices[m["merchant_id"]]["cases"].to_s + " cases " + @prices[m["merchant_id"]]["bottles"].to_s + " bottles" %>" data-url="http://www.beerfortextbooks.com" data-count="none" data-via="beer4textbooks">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></div>
-    	  <div class="beerlink2">
-				
-			<a class="beerme" type="button" href="<%= m["link"] %>">Sell Textbook for Beer</a>
-			
-    	  </div>
-  	  </div>
-	  <% end %>
-	  
+		</div>
+		<div class="beer_price">
+			<span>
+				<%= image_tag "/images/keg.png", 
+				{:height => 40} %><%= "  " +  
+				@prices[m["merchant_id"]]["kegs"].to_s %>
+			</span>
+			<span>
+				<%= image_tag "/images/caseofbeer.png", 
+				{:height => 40} %><%= "  " +  
+				@prices[m["merchant_id"]]["cases"].to_s %>
+			</span>
+			<span><%= image_tag "/images/beerbottle_small.png", 
+				{:height => 40} %><%= "  " +  
+				@prices[m["merchant_id"]]["bottles"].to_s%>
+			</span>
+
+		</div>
+		<div class="twitter">
+			<a id="twitter" href="http://twitter.com/share" class="twitter-share-button" data-text="I sold my textbooks for beer at BeerForTextbooks.com <%= @prices[m["merchant_id"]]["kegs"].to_s + " kegs " + @prices[m["merchant_id"]]["cases"].to_s + " cases " + @prices[m["merchant_id"]]["bottles"].to_s + " bottles" %>" data-url="http://www.beerfortextbooks.com" data-count="none" data-via="beer4textbooks">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		</div>
+		<div class="affiliate_link">
+			<a class="sell_button" 
+				href="<%= m["link"] %>">Sell Textbook for Beer</a>
+
+		</div>
+	</div>
+	<% end %>
+
 </div><!-- end of #main content and sidebar-->

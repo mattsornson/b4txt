@@ -13,26 +13,42 @@
 		<%= stylesheet_link_tag [ "styles", "skins/tango/skin", "skins/ie7/skin", "sexybuttons" ] %>
 
 		<%= javascript_include_tag [ "jquery.min", "jquery.jcarousel.min", "application" ] %>
+		
+		
 
-<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<style type="text/css"> 
+	<style type="text/css"> 
  
-/**
- * Overwrite for having a carousel with dynamic width.
- */
-.jcarousel-skin-tango .jcarousel-container-horizontal {
-    width: 85%;
-}
+	/**
+	 * Overwrite for having a carousel with dynamic width.
+	 */
+	.jcarousel-skin-tango .jcarousel-container-horizontal {
+	    width: 85%;
+	}
  
-.jcarousel-skin-tango .jcarousel-clip-horizontal {
-    width: 100%;
-	height: 220px;
-}
+	.jcarousel-skin-tango .jcarousel-clip-horizontal {
+	    width: 100%;
+		height: 220px;
+	}
  
-</style>
+	</style>
 
-<%= csrf_meta_tag %>
+	<%= csrf_meta_tag %>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22326278-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 		 
 </head>
 <body>

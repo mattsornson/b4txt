@@ -324,12 +324,13 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 
 	
 	background-color: #fefdf1;
-	border: 3px solid #ffc300;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	/*border: 3px solid #ffc300;*/
+	border: 1px solid #d28703;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
 	padding: 10px;
 	text-align: center;
-	-webkit-box-shadow: 0px 0px 10px #666;
+	-webkit-box-shadow: 1px 1px 5px #333;
 	}
 
 #footer {
@@ -459,7 +460,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 }
 
 #search_box input[type=submit] {
-	width: 168px;
+	width: 170px;
 	height: 53px;
 	position: relative;
 	top: -13px;
@@ -486,6 +487,10 @@ h1 { margin-bottom:0; }
 	background: white;
 	border: 1px solid #d28703;
 	padding: 30px;
+}
+
+.general_container p {
+	margin-bottom: 10px;
 }
 
 #results {

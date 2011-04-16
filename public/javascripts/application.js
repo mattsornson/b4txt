@@ -21,6 +21,13 @@
 			function() {
 				$(this).children().removeClass('hover');
 			});
+			
+		$('.coming_soon[title]').tooltip(
+			{
+				position: "bottom center",
+				effect: 'fade'
+			}
+		);
 	});
 	
 	function setBeerName(id, name) {

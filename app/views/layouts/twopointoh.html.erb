@@ -12,10 +12,12 @@
 
 		<%= stylesheet_link_tag [ "styles", "skins/tango/skin", "skins/ie7/skin", "sexybuttons" ] %>
 
-		<%= javascript_include_tag [ "jquery.min", "jquery.jcarousel.min", "application" ] %>
+		<%= javascript_include_tag [ "jquery.min"] %>
 		
+		<script src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
 		
-
+		<%= javascript_include_tag ["jquery.jcarousel.min", "application"] %>
+		
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 	<style type="text/css"> 
@@ -58,12 +60,14 @@
   
 		
 		<div align="right" id="account">
-        <span><%= link_to "Sign In", "/myaccount" %></span> 
+        <span><%= link_to "Sign In", "#", {:class => 'coming_soon', :title => 'Coming soon!'} %></span> 
 		<span class="gray">|</span> 
 		<span> 
-			<%= link_to "Beer Cart", "/cart" %></span> 
+			<%= link_to "Beer Cart", "#", {:class => 'coming_soon', :title => 'Coming soon!'} %></span> 
             </div>	
-			<div id="logo" align="center"> <%= link_to image_tag('b4txtlogo.png'), "/" %> </div>
+			<div id="logo" align="center">
+				<h1><%= link_to "BEER FOR TEXTBOOKS", "/" %></h1>
+			</div>
 		</div> 
 	
 
@@ -86,9 +90,9 @@
             	<p>
             	<ul type="none"> 
 					<li>About</li> 
-					<li><%= link_to "About", "/about" %></li> 
-					<li><%= link_to "Why Us?", "/why" %></li> 
-					<li><%= link_to "Blog", "/blog" %></li> 
+					<li><%= link_to "About", about_path %></li> 
+					<li><%= link_to "Why Us?", whyus_path %></li> 
+					<li><%= link_to "Blog", blog_path %></li> 
 				</ul>
 				</p>
             </div><!-- end #column1 -->
@@ -106,8 +110,8 @@
             	<p>
             	<ul type="none"> 
 					<li>Questions?</li> 
-					<li><%= link_to "FAQ", "/faq" %></li> 
-					<li><%= link_to "Customer Service", "/customers" %></li> 
+					<li><%= link_to "FAQ", faq_path %></li> 
+					<li><%= link_to "Customer Service", customer_service_path %></li> 
 				</ul>
 				</p>
             </div><!-- end #column3 -->
@@ -115,19 +119,19 @@
             	<p>
             	<ul type="none"> 
 					<li>Company</li> 
-					<li><%= link_to "Our Start", "/history" %></li> 
-					<li><%= link_to "Press", "/press" %></li> 
-					<li><%= link_to "Feedback", "/contact" %></li>
-					<li><%= link_to "Careers", "/careers" %></li>
+					<li><%= link_to "Our Start", beginnings_path %></li> 
+					<li><%= link_to "Press", press_path %></li> 
+					<li><%= link_to "Feedback", feedback_path %></li>
+					<li><%= link_to "Careers", careers_path %></li>
 				</ul>
 				</p>
             </div><!-- end #column4 -->
  </div>			
 
-<div id="cright">   
+	<div id="cright">   
   
 				<div class="footer-copyright"> 
-		Copyright &#169; 2011 <%= link_to "BeerForTextbooks.com", "/" %> | <%= link_to "Terms & Conditions", "/terms" %> | <%= link_to "Privacy Policy", "/privacy" %> | <%= link_to "Site Map", "/sitemap" %> 
+		Copyright &#169; 2011 <%= link_to "BeerForTextbooks.com", root_path %> | <%= link_to "Terms & Conditions", terms_path %> | <%= link_to "Privacy Policy", privacy_path %> | <%= link_to "Site Map", sitemap_path %> 
 
 	</div>
 	</footer>

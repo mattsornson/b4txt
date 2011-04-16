@@ -130,6 +130,19 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	color: #333;
 	text-decoration: underline;
 }
+
+#header h1 a:link,
+#header h1 a:visited {
+	position: relative;
+	top: 8px;
+	color: #eee;
+	text-shadow: 1px -3px 1px #ccc, -1px -3px 1px #ccc;
+}
+
+#header h1 a:hover {
+	text-decoration: none;
+	color: #fff;
+}
 	
 #account {
 	margin: 0 auto;
@@ -141,6 +154,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 #content_container {
 	margin-top: 20px;
 	width: 100%;
+	min-height: 400px;
 }
 
 #content_container a:link, #content_container a:visited, #content_container a:active {
@@ -150,6 +164,20 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 
 .shout {
 	color: #CC1100;
+}
+
+.tooltip {
+	display:none;
+	background:-moz-linear-gradient(top, #ffd73a, #ffa500); 
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffd73a), to(#ffa500));
+	font-size:10px;
+	font-weight: bold;
+	height:12px;
+	padding:5px;
+	color:#CC1100;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px #d28703;
+	margin-top: 10px;
 }
 
 #content_container a:hover {
@@ -218,7 +246,6 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 #beerselector .selected, #beerselector .selected:hover {
 	/*background:-moz-linear-gradient(top, #ffd73a, #ffa500); 
 	background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffd73a), to(#ffa500));*/
-	-webkit-box-shadow: 0px 0px 3px rgba(255,255,255,1);
 	border-radius: 5px;
 }
 
@@ -613,14 +640,16 @@ header {
 
 header h1 {
 		font-size: 36px;
-		margin-left: 10px;
+		margin-left: 0px;
 		float: left;
 		width: 500px;
+
 }
 
 header h1 a {
 	text-decoration: none;
 }
+
 
 header h2 {
 	float: right;

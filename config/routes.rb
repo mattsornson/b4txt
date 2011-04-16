@@ -1,63 +1,27 @@
 Beer4textbooks::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
   
-  match 'results' => 'welcome#results'
-  match 'beer_me' => 'welcome#beer_me'
-  match 'about' => 'welcome#about'
-  match 'sms_query' => 'welcome#sms_reply', :as => 'post'
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  match 'results' => 'welcome#results', :as => :buyback_search_results
+  match 'beer_me' => 'welcome#beer_me', :as => :buyback_book_result
+  
+  match 'about' => 'about#about', :as => :about
+  match 'whyus' => 'about#why', :as => :whyus
+  match 'blog' => 'about#blog', :as => :blog
+  
+  match 'faq' => 'questions#faq', :as => :faq
+  match 'customers' => 'questions#customers', :as => :customer_service
+  
+  match 'beginnings' => 'company#beginnings', :as => :beginnings
+  match 'press' => 'company#press', :as => :press
+  match 'feedback' => 'company#feedback', :as => :feedback
+  match 'careers' => 'company#careers', :as => :careers
+  match 'terms' => 'company#terms', :as => :terms
+  match 'privacy' => 'company#privacy', :as => :privacy
+  match 'sitemap' => 'company#sitemap', :as => :sitemap
+  
+  match 'sms_query' => 'welcome#sms_reply', :via => 'post'
+  
   root :to => "welcome#splash"
 
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
 end

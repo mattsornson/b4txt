@@ -134,7 +134,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 #header h1 a:link,
 #header h1 a:visited {
 	position: relative;
-	top: 8px;
+	top: -10px;
 	color: #eee;
 	text-shadow: 1px -3px 1px #ccc, -1px -3px 1px #ccc;
 }
@@ -150,6 +150,23 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	padding: 10px;
 
 	}
+
+	
+#share {
+	margin: 0 auto;
+	border: 0px;
+	padding: 10px;
+	float: left;
+	filter:alpha(opacity=40);
+	  /* CSS3 standard */
+	  opacity:0.4;
+}
+
+#share:hover {
+	filter:alpha(opacity=100);
+	  /* CSS3 standard */
+	  opacity:1;
+}
 	
 #content_container {
 	margin-top: 20px;
@@ -464,7 +481,7 @@ h1 { margin-bottom:0; }
 	padding: 30px;
 }
 
-#results_header {
+#results {
 	margin-bottom: 20px;
 }
 

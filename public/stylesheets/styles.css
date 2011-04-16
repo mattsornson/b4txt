@@ -487,6 +487,7 @@ h1 { margin-bottom:0; }
 	background: white;
 	border: 1px solid #d28703;
 	padding: 30px;
+	min-height: 400px;
 }
 
 .general_container p {

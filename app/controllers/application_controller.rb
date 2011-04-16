@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   
   protect_from_forgery
   
-  helper_method :has_ref?, :send_home_error, :no_book_error, :no_merchants_error
+  helper_method :has_ref?, :send_home_error, :no_book_error, :no_merchants_error,
+    :save_query
   
   protected
     def has_ref?
@@ -23,5 +24,11 @@ class ApplicationController < ActionController::Base
     def no_merchants_error
       flash[:notice] = "Nobody wants your book. Try something else."
       redirect_to :root
+    end
+    
+    def save_query
+      Query.create(:query_string => @keywords, 
+        :user_agent => request.env['HTTP_USER_AGENT'], 
+        :ip_address => request.remote_ip)
     end
 end

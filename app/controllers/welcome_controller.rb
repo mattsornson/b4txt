@@ -14,7 +14,8 @@ class WelcomeController < ApplicationController
       @brand = params[:brand]
       if Books.isIsbn?(@keywords)
         @isbn = @keywords.tr('-', '').tr('x', '').tr('X', '')
-        redirect_to :action => :beer_me, :q => @isbn
+        save_query
+        redirect_to :action => :beer_me, :q => @isbn, :brand => @brand
       else
         @search_pages = Books.getSearchPages(@keywords)
         if @search_pages.nil?
@@ -22,12 +23,14 @@ class WelcomeController < ApplicationController
           redirect_to :root
         elsif @search_pages["page"]["count"] == '1'
           @isbn = @search_pages["page"]["results"]["book"]["isbn10"]
+          save_query
           redirect_to :action => :beer_me, :q => @isbn, :brand => @brand
         else
           if @search_pages["page"].nil? or @search_pages["page"]["results"].nil?
             no_book_error
             return
           end
+          save_query
           @books = @search_pages["page"]["results"]["book"]
         end
       end

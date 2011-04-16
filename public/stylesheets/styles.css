@@ -457,6 +457,13 @@ h1 { margin-bottom:0; }
 	border:1px solid #d28703;
 }
 
+.general_container {
+	margin-top: 40px;
+	background: white;
+	border: 1px solid #d28703;
+	padding: 30px;
+}
+
 #results_header {
 	margin-bottom: 20px;
 }
@@ -624,6 +631,36 @@ width:419px;
 .widget_style img {
 	width:30px;
 	height:110px;
+}
+
+
+/** Tumblr blog styles */
+
+ol.tumblr_posts {
+	list-style-type: none;
+}
+
+ol.tumblr_posts li.tumblr_post {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 35px;
+}
+
+ol.tumblr_posts li.tumblr_post:last-child {
+	border-bottom: none;
+}
+
+.tumblr_title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.tumblr_body {
+	line-height: 22px;
+}
+
+.tumblr_body p {
+	margin-bottom: 5px;
 }
 
 

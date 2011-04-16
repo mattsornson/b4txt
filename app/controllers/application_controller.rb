@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   
   protect_from_forgery
   
-  helper_method :has_ref?, :send_home_error, :no_book_error
+  helper_method :has_ref?, :send_home_error, :no_book_error, :no_merchants_error
   
   protected
     def has_ref?
@@ -16,7 +16,12 @@ class ApplicationController < ActionController::Base
     end
     
     def no_book_error
-      flash[:notice] = "Your book doesn't exist. Were you drunk while you typed the ISBN?"
+      flash[:notice] = "No results found. Were you drunk while you typed the ISBN?"
+      redirect_to :root
+    end
+    
+    def no_merchants_error
+      flash[:notice] = "Nobody wants your book. Try something else."
       redirect_to :root
     end
 end

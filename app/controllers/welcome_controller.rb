@@ -20,8 +20,11 @@ class WelcomeController < ApplicationController
         if @search_pages.nil?
           flash[:notice] = "Sorry, we drank too much beer and had an error."
           redirect_to :root
+        elsif @search_pages["page"]["count"] == '1'
+          @isbn = @search_pages["page"]["results"]["book"]["isbn10"]
+          redirect_to :action => :beer_me, :q => @isbn, :brand => @brand
         else
-          if @search_pages["page"].nil?
+          if @search_pages["page"].nil? or @search_pages["page"]["results"].nil?
             no_book_error
             return
           end
@@ -48,13 +51,13 @@ class WelcomeController < ApplicationController
         @book = Books.getBookByIsbn(@isbn)
         @book_prices = Books.getBuybackInfoByIsbn(@isbn)
         if @book_prices["page"].nil?
-          no_book_error
+          no_merchants_error
           return
         end
         @merchants = @book_prices["page"]["offers"]["merchant"]
         @prices = {}
         if @merchants.nil?
-          send_home_error
+          no_merchants_error
           return
         else
           @merchants.each do |m|

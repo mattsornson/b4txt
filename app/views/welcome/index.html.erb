@@ -16,7 +16,10 @@
 </div> 
       		
 
-<div id="searchbar">        	
+<div id="searchbar">   
+	<% unless flash[:notice].nil? %>
+	  	<div id="flash"><%= flash[:notice] %></div>
+	<% end %>
  <div id="value2">See how much <span id="beer_name" class="shout">Keystone</span> your book is worth!</div>
           
 		<form action="/results" id="search_box">

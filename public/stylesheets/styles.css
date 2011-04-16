@@ -167,6 +167,13 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 	  /* CSS3 standard */
 	  opacity:1;
 }
+
+#flash {
+	background: red;
+	padding: 5px;
+	color: white;
+	text-shadow: 1px 1px 1px #333;
+}
 	
 #content_container {
 	margin-top: 20px;

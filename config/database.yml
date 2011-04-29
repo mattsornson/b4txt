@@ -5,7 +5,7 @@ development:
     database: b4t_development
     encoding: utf8
     username: root
-    password: y8bysfsyz
+    password: qw34t678
     host: localhost
     socket: /var/run/mysqld/mysqld.sock
 
